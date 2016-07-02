@@ -130,11 +130,66 @@
                 </p>
             </div>
             <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
+            <div class="w3-accordion">
+                <a onclick="myAccFunc('demoAcc')" href="#">
+                   link 2 <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc" class="w3-accordion-content w3-grey ">
+                    <a href="#">sub-Link 1</a>
+                    <a href="#">sub-Link 2</a>
+                    <a href="#">sub-Link 3</a>
+                    <a href="#">sub-Link 4</a>
+
+                </div>
+            </div>
+
             <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
+
+            <div class="w3-accordion">
+                <a onclick="myAccFunc('demoAcc1')" href="#">
+                    link 4 <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc1" class="w3-accordion-content w3-grey ">
+                    <a href="#">sub-Link 1</a>
+                    <a href="#">sub-Link 2</a>
+                    <a href="#">sub-Link 3</a>
+                    <a href="#">sub-Link 4</a>
+                    <a href="#">sub-Link 5</a>
+
+
+                </div>
+            </div>
+
+            <div class="w3-accordion">
+                <a onclick="myAccFunc('demoAcc2')" href="#">
+                    link 5 <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc2" class="w3-accordion-content w3-grey ">
+                    <a href="#">sub-Link 1</a>
+                    <a href="#">sub-Link 2</a>
+                    <a href="#">sub-Link 3</a>
+                    <a href="#">sub-Link 4</a>
+
+
+                </div>
+            </div>
+
+            <div class="w3-accordion">
+                <a onclick="myAccFunc('demoAcc3')" href="#">
+                    link 6 <i class="fa fa-caret-down"></i>
+                </a>
+                <div id="demoAcc3" class="w3-accordion-content w3-grey ">
+                    <a href="#">sub-Link 1</a>
+                    <a href="#">sub-Link 2</a>
+                    <a href="#">sub-Link 3</a>
+                    <a href="#">sub-Link 4</a>
+                    <a href="#">sub-Link 5</a>
+
+
+
+                </div>
+            </div>
+
             <a href="#">Link 7</a>
             <a href="#">Link 8</a>
             <a href="#">Link 9</a>
@@ -147,6 +202,18 @@
                     x.className += " w3-show";
                 } else {
                     x.className = x.className.replace(" w3-show", "");
+                }
+            }
+
+            function myAccFunc(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-opacity w3-grey";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                    x.previousElementSibling.className =
+                            x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
                 }
             }
         </script>
@@ -163,10 +230,8 @@
                 <ul class="uk-nav uk-nav-dropdown">
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-header">Header</li>
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-divider"></li>
                     <li><a href="#">Separated item</a></li>
                 </ul>
             </div>
@@ -177,11 +242,8 @@
                 <ul class="uk-nav uk-nav-dropdown">
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-header">Header</li>
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li><a href="#">Separated item</a></li>
                 </ul>
             </div>
         </div>
@@ -191,10 +253,8 @@
                 <ul class="uk-nav uk-nav-dropdown">
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-header">Header</li>
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-divider"></li>
                     <li><a href="#">Separated item</a></li>
                 </ul>
             </div>
@@ -206,11 +266,8 @@
                 <ul class="uk-nav uk-nav-dropdown">
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-header">Header</li>
                     <li><a href="#">Item</a></li>
                     <li><a href="#">Another item</a></li>
-                    <li class="uk-nav-divider"></li>
-                    <li><a href="#">Separated item</a></li>
                 </ul>
             </div>
         </div>
@@ -324,7 +381,7 @@
                 <dt><a class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
 
             </dl>
-            <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
+            <a href="html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</a>
         </div>
     </div>
 </div>
