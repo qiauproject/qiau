@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>QIAU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/notic.css">
+
+    <link rel="stylesheet" href="../lib/bulma/bulma.css">
+    <link rel="stylesheet" href="../lib/w3/w3.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.rtl.min.css">
+
+
+    <link rel="stylesheet" href="../lib/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/accordion.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/autocomplete.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/dotnav.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-advanced.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-password.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-select.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/htmleditor.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/nestable.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/notify.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/placeholder.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/progress.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/search.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slidenav.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slider.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slideshow.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/sortable.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/sticky.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/tooltip.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/upload.min.css">
+
+
+    <script src="../js/notic.js"></script>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/uikit/js/uikit.min.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+
+
+    <script src="../lib/uikit/js/uikit.min.js"></script>
+    <script src="../lib/uikit/js/components/accordion.min.js"></script>
+    <script src="../lib/uikit/js/components/autocomplete.min.js"></script>
+    <script src="../lib/uikit/js/components/datepicker.min.js"></script>
+    <script src="../lib/uikit/js/components/form-password.min.js"></script>
+    <script src="../lib/uikit/js/components/form-select.min.js"></script>
+    <script src="../lib/uikit/js/components/grid.min.js"></script>
+    <script src="../lib/uikit/js/components/grid-parallax.min.js"></script>
+    <script src="../lib/uikit/js/components/htmleditor.min.js"></script>
+    <script src="../lib/uikit/js/components/lightbox.min.js"></script>
+    <script src="../lib/uikit/js/components/nestable.min.js"></script>
+    <script src="../lib/uikit/js/components/notify.min.js"></script>
+    <script src="../lib/uikit/js/components/pagination.min.js"></script>
+    <script src="../lib/uikit/js/components/parallax.min.js"></script>
+    <script src="../lib/uikit/js/components/search.min.js"></script>
+    <script src="../lib/uikit/js/components/slider.min.js"></script>
+    <script src="../lib/uikit/js/components/slideset.min.js"></script>
+    <script src="../lib/uikit/js/components/slideshow.min.js"></script>
+    <script src="../lib/uikit/js/components/slideshow-fx.min.js"></script>
+    <script src="../lib/uikit/js/components/sortable.min.js"></script>
+    <script src="../lib/uikit/js/components/sticky.min.js"></script>
+    <script src="../lib/uikit/js/components/timepicker.min.js"></script>
+    <script src="../lib/uikit/js/components/tooltip.min.js"></script>
+    <script src="../lib/uikit/js/components/upload.min.js"></script>
+
+    <script src="../lib/uikit/js/core/alert.min.js"></script>
+    <script src="../lib/uikit/js/core/button.min.js"></script>
+    <script src="../lib/uikit/js/core/core.min.js"></script>
+    <script src="../lib/uikit/js/core/cover.min.js"></script>
+    <script src="../lib/uikit/js/core/dropdown.min.js"></script>
+    <script src="../lib/uikit/js/core/grid.min.js"></script>
+    <script src="../lib/uikit/js/core/modal.min.js"></script>
+    <script src="../lib/uikit/js/core/nav.min.js"></script>
+    <script src="../lib/uikit/js/core/offcanvas.min.js"></script>
+    <script src="../lib/uikit/js/core/scrollspy.min.js"></script>
+    <script src="../lib/uikit/js/core/smooth-scroll.min.js"></script>
+    <script src="../lib/uikit/js/core/switcher.min.js"></script>
+    <script src="../lib/uikit/js/core/tab.min.js"></script>
+    <script src="../lib/uikit/js/core/toggle.min.js"></script>
+    <script src="../lib/uikit/js/core/touch.min.js"></script>
+    <script src="../lib/uikit/js/core/utility.min.js"></script>
+
+
+
+</head>
+<body >
+
+<!-- start of header -->
+<div dir="rtl" >
+
+    <div>
+        <div class="uk-margin nav-set" >
+            <nav class="uk-navbar uk-navbar-attached nav-set">
+                <ul class="uk-navbar-nav hidden-xs">
+                    <img src="../img/index/head.png" class="nav-img" >
+                </ul>
+                <img src="../img/index/head.png" class="nav-img visible-xs center-block">
+                <div class="uk-navbar-flip hidden-xs">
+                    <ul class="uk-navbar-nav nav-search" >
+                        <div class="control is-grouped">
+                            <p class="control is-danger">
+                                <input class="input is-danger" type="text" placeholder="Find a repository">
+                            </p>
+                            <p class="control search-btn">
+                                <a class="button is-danger">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="w3-accordion w3-light-grey visible-xs">
+
+            <button onclick="myFunction('Mobile-Menu')" class="w3-btn-block head-btn  head-brn-once "><i class="fa fa-navicon"></i></button>
+            <div id="Mobile-Menu" class="w3-accordion-content w3-animate-zoom  ">
+                <br>
+                <div class="control is-grouped w3-margin-right" >
+                    <p class="control is-danger">
+                        <input class="input is-danger" type="text" placeholder="Find a repository">
+                    </p>
+                    <p class="control search-btn">
+                        <a class="button is-danger">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </p>
+                </div>
+                <a href="#">Link 1</a>
+                <div class="w3-accordion">
+                    <a onclick="myAccFunc('demoAcc')" href="#">
+                        link 2 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc" class="w3-accordion-content w3-grey ">
+                        <a href="#">sub-Link 1</a>
+                        <a href="#">sub-Link 2</a>
+                        <a href="#">sub-Link 3</a>
+                        <a href="#">sub-Link 4</a>
+
+                    </div>
+                </div>
+
+                <a href="#">Link 3</a>
+
+                <div class="w3-accordion">
+                    <a onclick="myAccFunc('demoAcc1')" href="#">
+                        link 4 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc1" class="w3-accordion-content w3-grey ">
+                        <a href="#">sub-Link 1</a>
+                        <a href="#">sub-Link 2</a>
+                        <a href="#">sub-Link 3</a>
+                        <a href="#">sub-Link 4</a>
+                        <a href="#">sub-Link 5</a>
+
+
+                    </div>
+                </div>
+
+                <div class="w3-accordion">
+                    <a onclick="myAccFunc('demoAcc2')" href="#">
+                        link 5 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc2" class="w3-accordion-content w3-grey ">
+                        <a href="#">sub-Link 1</a>
+                        <a href="#">sub-Link 2</a>
+                        <a href="#">sub-Link 3</a>
+                        <a href="#">sub-Link 4</a>
+
+
+                    </div>
+                </div>
+
+                <div class="w3-accordion">
+                    <a onclick="myAccFunc('demoAcc3')" href="#">
+                        link 6 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc3" class="w3-accordion-content w3-grey ">
+                        <a href="#">sub-Link 1</a>
+                        <a href="#">sub-Link 2</a>
+                        <a href="#">sub-Link 3</a>
+                        <a href="#">sub-Link 4</a>
+                        <a href="#">sub-Link 5</a>
+
+
+
+                    </div>
+                </div>
+
+                <a href="#">Link 7</a>
+                <a href="#">Link 8</a>
+                <a href="#">Link 9</a>
+                <a href="#">Link 10</a>
+            </div>
+            <script>
+                function myFunction(id) {
+                    var x = document.getElementById(id);
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+
+                function myAccFunc(id) {
+                    var x = document.getElementById(id);
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                        x.previousElementSibling.className += " w3-opacity w3-grey";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                        x.previousElementSibling.className =
+                                x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
+                    }
+                }
+            </script>
+        </div>
+        <div class="w3-row hidden-xs  ">
+
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">1</a>
+            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">2</a>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">3</a>
+            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">4</a>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">5 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Separated item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">6 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">7 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Separated item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">8</a>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">9 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Another item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">10</a>
+        </div>
+    </div>
+
+    <!-- end of header -->
+
+
+    <div class="pad-con-b pad-con-l pad-con-r pad-con-t">
+
+
+            <div class="equal-height" data-uk-grid="" style="position: relative; height: 510px;">
+
+                <div class="uk-width-small-1-2 uk-width-medium-2-3 uk-width-large-1-2 " data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 0px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-red ">
+
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <h3 class="uk-panel-title">
+                                <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+
+
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 465px; opacity: 1;padding: 2px;">
+                    <div class="uk-panel uk-panel-box w3-pale-yellow">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 697.5px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-red">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 170px; left: 0px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-green">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-2" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 170px; left: 232.5px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-blue">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 170px; left: 697.5px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-yellow">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-2-3 uk-width-large-1-2" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 340px; left: 0px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-green">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-2" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 340px; left: 465px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-red">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-2-3 uk-width-large-1-2 " data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 0px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-blue">
+
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+
+
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 465px; opacity: 1;padding: 2px;">
+                    <div class="uk-panel uk-panel-box w3-pale-yellow">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-4" data-grid-prepared="true" style="position: absolute; box-sizing: border-box; top: 0px; left: 697.5px; opacity: 1;padding: 2px">
+                    <div class="uk-panel uk-panel-box w3-pale-red">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
+                        <div class="uk-badge w3-teal">10 farvardin</div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/notic-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+
+        <ul class="uk-pagination">
+            <li  style="margin-left: 1px"><a href="#" class="w3-red w3-hover-opacity"><i class="uk-icon-angle-double-right"></i>Next </a></li>
+            <li><a href="#"  class="w3-red w3-hover-opacity"> Previous<i class="uk-icon-angle-double-left"></i></a></li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- start of cover -->
+
+    <div class="uk-block w3-light-grey ">
+        <div class="pad-con-l pad-con-r pad-con-t" >
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-3 text-center"  >
+
+                    <br>
+                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-send" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-pink w3-text-white w3-hover-opacity" ><i class="fa fa-instagram" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-blue w3-text-white w3-hover-opacity" ><i class="fa fa-facebook" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-twitter" style="vertical-align: text-bottom" ></i></a>
+                    <br>
+
+
+                </div>
+                <div class="uk-width-medium-2-3 ">
+                    <div class="uk-panel-box">
+                        <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fhgbkdbgkjdbgk dkjbgjdbgjd djbgdgbjdbkjg dkjgbkjdbgjkbd bdgbdkjgbkjd dkjbgkdbgkjd kjdbgkjbdgkj.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- end of cover -->
+
+
+    <!-- start of footer -->
+
+    <div class="uk-block hidden-xs " style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <div class="w3-row">
+                <div class="w3-col s9  ">
+                    <ul>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li>
+                            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-col s3  w3-center">
+                    <img src="../img/index/foot-logo.png">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="uk-block visible-xs" style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <table class="uk-table">
+
+                <tr >
+                    <td style="text-align: right;vertical-align: middle">
+                        <img  src="../img/index/foot-logo.png">
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        </ul>
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </table>
+            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
+
+        </div>
+    </div>
+
+    <!-- end of footer -->
+
+</div>
+</body>
+</html>
