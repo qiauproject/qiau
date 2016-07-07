@@ -50,5 +50,36 @@ a:hover{
     float: left;
 }
 
+.btm{
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+}
+.btm-b{
+    width: 250px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.btm-c{
+    width: 150px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.first{
+    margin-left: 10px;
+}
 
+.img-rad{
+    border-radius: 10px 10px 0 0;
+}
 
+.box-rad{
+    margin-top: -5px ;
+    border-radius: 0 0 10px 10px;
+}
+
+.mob-log{
+    height: 50%!important;
+    width: 50%!important;
+    padding-bottom: 5px;
+}
