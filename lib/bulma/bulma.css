@@ -5163,8 +5163,8 @@ a.nav-item.is-tab.is-active {
     vertical-align: top;
     width: 16px;
     color: #aeb1b5;
-    float: left;
-    margin: 0 4px 0 -2px;
+    float: right;
+    margin: 0 4px -2px 0px;
 }
 
 .panel-icon .fa {
