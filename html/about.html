@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>QIAU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/about.css">
+
+    <link rel="stylesheet" href="../lib/bulma/bulma.css">
+    <link rel="stylesheet" href="../lib/w3/w3.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.rtl.min.css">
+
+
+    <link rel="stylesheet" href="../lib/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/accordion.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/autocomplete.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/dotnav.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-advanced.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-password.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/form-select.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/htmleditor.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/nestable.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/notify.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/placeholder.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/progress.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/search.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slidenav.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slider.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/slideshow.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/sortable.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/sticky.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/tooltip.min.css">
+    <link rel="stylesheet" href="../lib/uikit/css/components/upload.min.css">
+
+
+    <script src="../js/about.js"></script>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/uikit/js/uikit.min.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+
+
+    <script src="../lib/uikit/js/uikit.min.js"></script>
+    <script src="../lib/uikit/js/components/accordion.min.js"></script>
+    <script src="../lib/uikit/js/components/autocomplete.min.js"></script>
+    <script src="../lib/uikit/js/components/datepicker.min.js"></script>
+    <script src="../lib/uikit/js/components/form-password.min.js"></script>
+    <script src="../lib/uikit/js/components/form-select.min.js"></script>
+    <script src="../lib/uikit/js/components/grid.min.js"></script>
+    <script src="../lib/uikit/js/components/grid-parallax.min.js"></script>
+    <script src="../lib/uikit/js/components/htmleditor.min.js"></script>
+    <script src="../lib/uikit/js/components/lightbox.min.js"></script>
+    <script src="../lib/uikit/js/components/nestable.min.js"></script>
+    <script src="../lib/uikit/js/components/notify.min.js"></script>
+    <script src="../lib/uikit/js/components/pagination.min.js"></script>
+    <script src="../lib/uikit/js/components/parallax.min.js"></script>
+    <script src="../lib/uikit/js/components/search.min.js"></script>
+    <script src="../lib/uikit/js/components/slider.min.js"></script>
+    <script src="../lib/uikit/js/components/slideset.min.js"></script>
+    <script src="../lib/uikit/js/components/slideshow.min.js"></script>
+    <script src="../lib/uikit/js/components/slideshow-fx.min.js"></script>
+    <script src="../lib/uikit/js/components/sortable.min.js"></script>
+    <script src="../lib/uikit/js/components/sticky.min.js"></script>
+    <script src="../lib/uikit/js/components/timepicker.min.js"></script>
+    <script src="../lib/uikit/js/components/tooltip.min.js"></script>
+    <script src="../lib/uikit/js/components/upload.min.js"></script>
+
+    <script src="../lib/uikit/js/core/alert.min.js"></script>
+    <script src="../lib/uikit/js/core/button.min.js"></script>
+    <script src="../lib/uikit/js/core/core.min.js"></script>
+    <script src="../lib/uikit/js/core/cover.min.js"></script>
+    <script src="../lib/uikit/js/core/dropdown.min.js"></script>
+    <script src="../lib/uikit/js/core/grid.min.js"></script>
+    <script src="../lib/uikit/js/core/modal.min.js"></script>
+    <script src="../lib/uikit/js/core/nav.min.js"></script>
+    <script src="../lib/uikit/js/core/offcanvas.min.js"></script>
+    <script src="../lib/uikit/js/core/scrollspy.min.js"></script>
+    <script src="../lib/uikit/js/core/smooth-scroll.min.js"></script>
+    <script src="../lib/uikit/js/core/switcher.min.js"></script>
+    <script src="../lib/uikit/js/core/tab.min.js"></script>
+    <script src="../lib/uikit/js/core/toggle.min.js"></script>
+    <script src="../lib/uikit/js/core/touch.min.js"></script>
+    <script src="../lib/uikit/js/core/utility.min.js"></script>
+
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-LUH1KFh0FdafGIBCybTqIM-7eajjNy4"></script>
+    <script>
+        var myCenter=new google.maps.LatLng(36.3228975,50.031462);
+        var marker;
+
+        function initialize()
+        {
+            var mapProp = {
+                center:myCenter,
+                zoom:16,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker=new google.maps.Marker({
+                position:myCenter,
+                animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
+
+
+
+</head>
+<body >
+
+<!-- start of header -->
+<div dir="rtl">
+
+    <div>
+        <div class="uk-margin nav-set" >
+            <nav class="uk-navbar uk-navbar-attached nav-set">
+                <ul class="uk-navbar-nav hidden-xs">
+                    <img src="../img/index/head.png" class="nav-img" >
+                </ul>
+                <img src="../img/index/head.png" class="nav-img visible-xs center-block">
+                <div class="uk-navbar-flip hidden-xs">
+                    <ul class="uk-navbar-nav nav-search" >
+                        <div class="control is-grouped">
+                            <p class="control is-danger">
+                                <input class="input is-danger" type="text" placeholder="Find a repository">
+                            </p>
+                            <p class="control search-btn">
+                                <a class="button is-danger">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="w3-accordion w3-light-grey visible-xs">
+
+            <button onclick="myFunction('Mobile-Menu')" class="w3-btn-block head-btn  head-brn-once "><i class="fa fa-navicon"></i></button>
+            <div id="Mobile-Menu" class="w3-accordion-content w3-animate-zoom  ">
+                <br>
+                <div class="control is-grouped w3-margin-right" >
+                    <p class="control is-danger">
+                        <input class="input is-danger" type="text" placeholder="Find a repository">
+                    </p>
+                    <p class="control search-btn">
+                        <a class="button is-danger">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </p>
+                </div>
+                <a class="w3-text-red" href="#">Link 1</a>
+                <div class="w3-accordion">
+                    <a class="w3-text-red" onclick="myAccFunc('demoAcc')" href="#">
+                        link 2 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc" class="w3-accordion-content w3-grey ">
+                        <a class="w3-text-red" href="#">sub-Link 1</a>
+                        <a class="w3-text-red" href="#">sub-Link 2</a>
+                        <a class="w3-text-red" href="#">sub-Link 3</a>
+                        <a class="w3-text-red" href="#">sub-Link 4</a>
+
+                    </div>
+                </div>
+
+                <a class="w3-text-red" href="#">Link 3</a>
+
+                <div class="w3-accordion">
+                    <a class="w3-text-red" onclick="myAccFunc('demoAcc1')" href="#">
+                        link 4 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc1" class="w3-accordion-content w3-grey ">
+                        <a class="w3-text-red" href="#">sub-Link 1</a>
+                        <a class="w3-text-red" href="#">sub-Link 2</a>
+                        <a class="w3-text-red" href="#">sub-Link 3</a>
+                        <a class="w3-text-red" href="#">sub-Link 4</a>
+                        <a class="w3-text-red" href="#">sub-Link 5</a>
+
+
+                    </div>
+                </div>
+
+                <div class="w3-accordion">
+                    <a class="w3-text-red" onclick="myAccFunc('demoAcc2')" href="#">
+                        link 5 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc2" class="w3-accordion-content w3-grey ">
+                        <a class="w3-text-red" href="#">sub-Link 1</a>
+                        <a class="w3-text-red" href="#">sub-Link 2</a>
+                        <a class="w3-text-red" href="#">sub-Link 3</a>
+                        <a class="w3-text-red" href="#">sub-Link 4</a>
+
+
+                    </div>
+                </div>
+
+                <div class="w3-accordion">
+                    <a class="w3-text-red" onclick="myAccFunc('demoAcc3')" href="#">
+                        link 6 <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="demoAcc3" class="w3-accordion-content w3-grey ">
+                        <a class="w3-text-red" href="#">sub-Link 1</a>
+                        <a class="w3-text-red" href="#">sub-Link 2</a>
+                        <a class="w3-text-red" href="#">sub-Link 3</a>
+                        <a class="w3-text-red" href="#">sub-Link 4</a>
+                        <a class="w3-text-red" href="#">sub-Link 5</a>
+
+
+
+                    </div>
+                </div>
+
+                <a class="w3-text-red" href="#">Link 7</a>
+                <a class="w3-text-red" href="#">Link 8</a>
+                <a class="w3-text-red" href="#">Link 9</a>
+                <a class="w3-text-red" href="#">Link 10</a>
+            </div>
+            <script>
+                function myFunction(id) {
+                    var x = document.getElementById(id);
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+
+                function myAccFunc(id) {
+                    var x = document.getElementById(id);
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                        x.previousElementSibling.className += " w3-opacity w3-grey";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                        x.previousElementSibling.className =
+                                x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
+                    }
+                }
+            </script>
+        </div>
+        <div class="w3-row hidden-xs  ">
+
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">1</a>
+            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">2</a>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">3</a>
+            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">4</a>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">5 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">6 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">7 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">8</a>
+            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                <a class="w3-btn  w3-center w3-text-white head-btn">9 <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+                    <ul class="uk-nav uk-nav-dropdown">
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li><a href="#" class="w3-hover-red">Item</a></li>
+                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">10</a>
+        </div>
+    </div>
+
+    <!-- end of header -->
+
+    <div class=" uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" data-uk-parallax="{bg: '-200'}" style="height: 350px; background-image: url('http://qiau.ac.ir/PhotoGallery/images/13900614111619.jpg'); background-size: 1100px 550px; background-position: 50% -114.24px; background-repeat: no-repeat;">
+        <div class="uk-width-medium-1-2">
+            <h1 class="uk-text-contrast">Heading</h1>
+            <p class="uk-text-large">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+
+<div class="text-center w3-red">
+    <br>
+    <h1 style="color: white">text text text</h1>
+    <br>
+</div>
+
+    <div class="uk-block uk-block-secondary uk-contrast uk-block-large">
+
+        <div class="uk-container">
+
+            <h3>Large</h3>
+
+            <div class="uk-grid uk-grid-match" data-uk-grid-margin="">
+                <div class="uk-width-medium-1-3 uk-row-first">
+                    <div class="uk-panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-3">
+                    <div class="uk-panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-3">
+                    <div class="uk-panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="uk-slidenav-position" data-uk-slider="{center:true}" style="direction: ltr!important;">
+        <div class="uk-slider-container">
+            <ul class="test-images uk-slider uk-slider-fullscreen uk-grid-width-medium-1-4" style="min-width: 5580px; min-height: 643px; transform: translateX(0px);">
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-active" style="left: 0px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13891102141707.jpg')">
+                    <div class="uk-panel-space">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-slide-after" style="left: 620px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13880728111506.jpg')">
+                    <div class="uk-panel-space">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-slide-after" style="left: 1240px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13900631084017.jpg')">
+                    <div class="uk-panel-space">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-slide-after" style="left: 1860px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13891102142542.jpg')">
+                    <div class="uk-panel-space ">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-slide-after" style="left: 2480px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13880728130847.jpg')">
+                    <div class="uk-panel-space">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+                <li class="uk-cover-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-text-contrast uk-slide-after" style="left: 3100px; width: 620px;background-image: url('http://qiau.ac.ir/PhotoGallery/images/13901220152513.jpg')">
+                    <div class="uk-panel-space">
+                        <h1 class="uk-text-contrast">Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+
+    </div>
+
+    <div class="text-center w3-teal">
+        <br>
+        <h1 style="color: white">text text text</h1>
+        <br>
+    </div>
+
+    <div class="pad-con-b pad-con-l pad-con-r  pad-con-t">
+
+
+        <div class="uk-grid uk-grid-match uk-grid-width-1-1 uk-grid-width-medium-1-3 tm-grid-height-250" data-uk-grid="" data-uk-grid-margin="" data-uk-grid-parallax="" style="margin-bottom: 150px;">
+            <div class="uk-row-first" style="transition: transform 150ms linear; transform: translate3d(0px, 3.6662px, 0px);">
+
+                <div class="uk-panel uk-panel-box w3-card-4 ">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+
+            </div>
+            <div class="uk-grid-margin" style="transition: transform 150ms linear; transform: translate3d(0px, 29.3296px, 0px);">
+
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+
+            </div>
+            <div style="transition: transform 150ms linear; transform: translate3d(0px, 3.6662px, 0px);">
+
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4">
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+                <div class="uk-panel uk-panel-box w3-card-4 " >
+                        <div class="uk-panel-teaser" >
+                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                        </div>
+                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                            <h3 class="uk-panel-title">
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="uk-block w3-cyan ">
+
+        <div class="w3-row pad-con-r pad-con-l">
+
+
+            <div class="uk-grid" data-uk-grid-margin="">
+                <div class="uk-width-medium-1-2 uk-row-first w3-text-white"><div class="uk-panel">
+
+                    <h1 class="uk-text-contrast">Title</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <blockquote>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <small class="w3-text-light-grey">Someone famous</small>
+                    </blockquote>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+
+                </div></div>
+                <div class="uk-width-medium-1-2"><div class="uk-panel">
+                    <div class="w3-card-24" id="googleMap" style="width:100%;height:380px;border-radius: 10px"></div>
+                </div></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="uk-block w3-white ">
+        <div class="pad-con-l pad-con-r pad-con-t" >
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-3 text-center"  >
+
+                    <br>
+                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-send" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-pink w3-text-white w3-hover-opacity" ><i class="fa fa-instagram" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-blue w3-text-white w3-hover-opacity" ><i class="fa fa-facebook" style="vertical-align: text-bottom" ></i></a>
+                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-twitter" style="vertical-align: text-bottom" ></i></a>
+                    <br>
+
+
+                </div>
+                <div class="uk-width-medium-2-3 ">
+                    <div class="uk-panel-box">
+                        <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fhgbkdbgkjdbgk dkjbgjdbgjd djbgdgbjdbkjg dkjgbkjdbgjkbd bdgbdkjgbkjd dkjbgkdbgkjd kjdbgkjbdgkj.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- end Of news-temp -->
+
+
+    <!-- start of cover -->
+
+    <div class="uk-block w3-light-grey hidden-xs">
+        <div class="w3-row pad-con-r pad-con-l">
+            <div class="w3-col m2  ">
+                <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                    <span> Twitter</span>
+                </button>
+                <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                    <span> Twitter</span>
+                </button>
+                <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                    <span> Twitter</span>
+                </button>
+                <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                    <span> Twitter</span>
+                </button>
+                <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                    <span> Twitter</span>
+                </button>
+                <button type="button" class="btn w3-teal w3-hover-opacity  btn-block btn-xs">Extra small button</button>
+                <button type="button" class="btn w3-teal w3-hover-opacity  btn-block btn-xs">Extra small button</button>
+
+
+            </div>
+            <div class="w3-col m2 ">
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 5</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 6</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 7</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 8</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 9</a></li>
+
+                </ul>
+            </div>
+            <div class="w3-col m2  ">
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 5</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 6</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 7</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 8</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 9</a></li>
+
+                </ul>
+            </div>
+            <div class="w3-col m2 ">
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 5</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 6</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 7</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 8</a></li>
+                </ul>
+            </div>
+            <div class="w3-col m2  ">
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 5</a></li>
+                </ul>
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+
+                </ul>
+            </div>
+            <div class="w3-col m2 ">
+                <h4 style="color: firebrick"><b>Title 1</b></h4>
+                <ul class="uk-list">
+                    <li><a class="w3-text-black w3-hover-opacity">link 1</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 2</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 3</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 4</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 5</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 6</a></li>
+                    <li><a class="w3-text-black w3-hover-opacity">link 7</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="uk-block w3-light-grey visible-xs">
+        <div class="pad-con-r pad-con-l">
+
+            <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span> Twitter</span>
+            </button>
+            <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span> Twitter</span>
+            </button>
+            <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span> Twitter</span>
+            </button>
+            <button type="button" class="btn w3-teal w3-hover-opacity btn-default btn-block">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <span> Twitter</span>
+            </button>
+            <button type="button" class="btn w3-teal w3-hover-opacity  btn-block btn-xs">Extra small button</button>
+
+            <button type="button" class="btn w3-teal w3-hover-opacity  btn-block btn-xs">Extra small button</button>
+            <button type="button" class="btn w3-teal w3-hover-opacity  btn-block btn-xs">Extra small button</button>
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                    </td>
+                </tr>
+            </table>
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                    </td>
+                </tr>
+            </table>
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+
+            </table>
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <h4 style="color: firebrick"><b>Title 1</b></h4>
+            <hr style="background-color: firebrick;height: 2px">
+            <table class="uk-table">
+                <tr >
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <a class="w3-text-black w3-hover-opacity">link 1</a>
+                    </td>
+                    <td style="text-align: right">
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- end of cover -->
+
+
+    <!-- start of footer -->
+
+    <div class="uk-block hidden-xs " style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <div class="w3-row">
+                <div class="w3-col s9  ">
+                    <ul>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li>
+                            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-col s3  w3-center">
+                    <img src="../img/index/foot-logo.png">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="uk-block visible-xs" style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <table class="uk-table">
+
+                <tr >
+                    <td style="text-align: right;vertical-align: middle">
+                        <img  src="../img/index/foot-logo.png">
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        </ul>
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </table>
+            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
+
+        </div>
+    </div>
+
+    <!-- end of footer -->
+
+</div>
+</body>
+</html>
