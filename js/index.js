@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope,$http) {
-    url = "http://api.openweathermap.org/data/2.5/forecast?q=Qazvin,ir&units=metric&appid=c90fc1475e237f7aafd567d3a6deff71";
+    url = "https://api.openweathermap.org/data/2.5/forecast?q=Qazvin,ir&units=metric&appid=c90fc1475e237f7aafd567d3a6deff71";
     $http.get(url)
         .success(function (data) {
             $scope.data = data;
