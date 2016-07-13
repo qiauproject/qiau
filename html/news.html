@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-    <title>QIAU</title>
+    <title>
+        دانشگـاه آزاد اسلامـي قـزويـن
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../img/qiau.ico">
 
     <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
 
     <link rel="stylesheet" href="../lib/bulma/bulma.css">
     <link rel="stylesheet" href="../lib/w3/w3.css">
     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/owfont-master/css/owfont-regular.css">
 
 
     <link rel="stylesheet" href="../lib/uikit/css/uikit.min.css">
@@ -36,10 +42,11 @@
     <link rel="stylesheet" href="../lib/uikit/css/components/upload.min.css">
 
 
-    <script src="../js/news.js"></script>
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/uikit/js/uikit.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../lib/angularjs/angular.min.js"></script>
+
 
 
     <script src="../lib/uikit/js/uikit.min.js"></script>
@@ -87,11 +94,12 @@
 
 
 </head>
-<body >
+<body ng-app="myApp">
 
 <!-- start of header -->
 
 <div dir="rtl">
+
     <div>
         <div class="uk-margin nav-set" >
             <nav class="uk-navbar uk-navbar-attached nav-set">
@@ -103,7 +111,7 @@
                     <ul class="uk-navbar-nav nav-search" >
                         <div class="control is-grouped">
                             <p class="control is-danger">
-                                <input class="input is-danger" type="text" placeholder="Find a repository">
+                                <input class="input is-danger" type="text" placeholder="جستجو">
                             </p>
                             <p class="control search-btn">
                                 <a class="button is-danger">
@@ -115,6 +123,7 @@
                 </div>
             </nav>
         </div>
+
         <div class="w3-accordion w3-light-grey visible-xs">
 
             <button onclick="myFunction('Mobile-Menu')" class="w3-btn-block head-btn  head-brn-once "><i class="fa fa-navicon"></i></button>
@@ -122,7 +131,7 @@
                 <br>
                 <div class="control is-grouped w3-margin-right" >
                     <p class="control is-danger">
-                        <input class="input is-danger" type="text" placeholder="Find a repository">
+                        <input class="input is-danger" type="text" placeholder="جستجو">
                     </p>
                     <p class="control search-btn">
                         <a class="button is-danger">
@@ -130,32 +139,41 @@
                         </a>
                     </p>
                 </div>
-                <a class="w3-text-red" href="#">Link 1</a>
-                <div class="w3-accordion">
-                    <a class="w3-text-red" onclick="myAccFunc('demoAcc')" href="#">
-                        link 2 <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div id="demoAcc" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
 
-                    </div>
-                </div>
+                <a class="w3-text-red" href="../index.html">
+                    <i class="fa fa-home"></i>
+                    خانه
+                </a>
 
-                <a class="w3-text-red" href="#">Link 3</a>
+                <a class="w3-text-red" href="../html/about.html">
+                    درباره دانشگاه
+                </a>
+
+                <a class="w3-text-red" href="../html/template.html">
+                    ارتباط با ما
+                </a>
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc1')" href="#">
-                        link 4 <i class="fa fa-caret-down"></i>
+                        دانشکده ها
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc1" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc1" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده مديريت و حسابداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  عمران و نقشه برداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  معماري وشهرسازي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده صنايع و مکانيک
+                        </a>
 
 
                     </div>
@@ -163,13 +181,22 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc2')" href="#">
-                        link 5 <i class="fa fa-caret-down"></i>
+                        اساتید
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc2" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
+                    <div id="demoAcc2" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            اعضاي هيات علمي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرمها و آئين نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال اساتيد
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
                     </div>
@@ -177,102 +204,140 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc3')" href="#">
-                        link 6 <i class="fa fa-caret-down"></i>
+                        دانشجويان
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc3" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc3" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/user.html">
+                            اطلاع رساني تحصيلي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرم هاي آموزشي - پژوهشي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            روال امور آموزشي و دانشجويي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
 
                     </div>
                 </div>
 
-                <a class="w3-text-red" href="#">Link 7</a>
-                <a class="w3-text-red" href="#">Link 8</a>
-                <a class="w3-text-red" href="#">Link 9</a>
-                <a class="w3-text-red" href="#">Link 10</a>
+                <a class="w3-text-red" href="http://nahad.qiau.ac.ir/">
+                    نهاد نمايندگي مقام معظم رهبري
+                </a>
+                <a class="w3-text-red" href="http://cul.qiau.ac.ir/">
+                    فرهنگي
+                </a>
+                <a class="w3-text-red" href="http://iau.ac.ir/">
+                    سازمان مرکزي دانشگاه آزاد
+                </a>
+                <a class="w3-text-red" href="../html/template.html">
+                    نشریات
+                </a>
             </div>
-            <script>
-                function myFunction(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
 
-                function myAccFunc(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                        x.previousElementSibling.className += " w3-opacity w3-grey";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                        x.previousElementSibling.className =
-                                x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
-                    }
-                }
-            </script>
         </div>
         <div class="w3-row hidden-xs  ">
 
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">1</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">2</a>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">3</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">4</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                نشریات
+            </a>
+            <a href="http://iau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf" >
+                سازمان مرکزي دانشگاه آزاد
+            </a>
+            <a href="http://cul.qiau.ac.ir/" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                فرهنگي
+            </a>
+            <a href="http://nahad.qiau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf">
+                نهاد نمايندگي مقام معظم رهبري
+            </a>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">5 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشجويان
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/user.html" class="w3-hover-red ">
+                            اطلاع رساني تحصيلي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرم هاي آموزشي - پژوهشي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            روال امور آموزشي و دانشجويي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">6 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    اساتید
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            اعضاي هيات علمي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرمها و آئين نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال اساتيد
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">7 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشکده ها
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده مديريت و حسابداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  عمران و نقشه برداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  معماري وشهرسازي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده صنايع و مکانيک
+                        </a></li>
                     </ul>
                 </div>
             </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">8</a>
-            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">9 <i class="uk-icon-caret-down"></i></a>
-                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
-                    <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">10</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                ارتباط با ما
+            </a>
+            <a href="../html/about.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                درباره دانشگاه
+            </a>
+            <a href="../index.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                <i class="fa fa-home"></i>
+
+                خانه
+            </a>
         </div>
     </div>
 
@@ -287,20 +352,29 @@
         <div class="tile is-parent">
             <div class="tile is-child w3-white">
                 <div class="uk-panel-teaser" >
-                    <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="100%">
+                    <img src="http://www.qiau.ac.ir/announce/news/images/13950414100020.jpg" width="100%">
                 </div>
                 <div class="uk-panel uk-panel-box uk-panel-box-hover w3-white" style="min-height: 179px;">
-                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                    <div class="uk-badge w3-teal">10 farvardin</div>
+                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                        پژوهشی
+                    </a></div>
+                    <div class="uk-badge w3-teal">
+                        1395/04/14
+                    </div>
                     <br>
                     <br>
 
-                    <h1 style="font-size: 50px"  class="uk-panel-title ">
-                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                    <h1 style="font-size: 2em"  class="uk-panel-title ">
+                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                            کاروان علمی جمهوری اسلامی ایران خوش درخشید.
+                        </a>
                     </h1>
-                    <h3>
-                        The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
-                        The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+                    <h3 class="align-txt">
+                        زرگترین و معتبرترین رقابت رباتیک جهان با کسب 13 مقام برای کاروان علمی جمهوری اسلامی ایران در شهر لایپزیک آلمان به پایان رسید.
+
+                        به گزارش ستاد اطلاع رسانی مسابقات جهانی ربوکاپ 2016 آلمان، رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران با اعلام این خبر، افزود: پس از 3 روز رقابت فشرده و نفسگیر، تیم های ایرانی موفق به کسب 13 مقام در مسابقات جهانی ربوکاپ 2016 آلمان شدند که تیم MRL دانشگاه آزاد اسلامی قزوین با کسب 6 مقام به عنوان پرافتخارترین تیم این دوره از مسابقات دست یافت.
+
+                        دکتر موسی خانی با اشاره به پایان مسابقات، در خصوص نتایج تیم های ایرانی، گفت: در مسابقات بخش دانش آموزی و در لیگ امدادگر سطح الف تیم کاوش از دبیرستان نقش قلم رتبه ی دوم انفرادی را کسب کرد. این تیم همچنین عنوان بهترین طراحی سخت افزار را در این لیگ به خود اختصاص داد.
                     </h3>
                 </div>
             </div>
@@ -308,28 +382,44 @@
         <div class="tile is-4 is-vertical is-parent">
             <div class="tile is-child w3-white">
                 <div class="uk-panel-teaser" >
-                    <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                    <img src="http://www.qiau.ac.ir/announce/news/images/13950414171051.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                 </div>
                 <div class="uk-panel uk-panel-box uk-panel-box-hover w3-white" style="min-height: 179px;">
-                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                    <div class="uk-badge w3-teal">10 farvardin</div>
+                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                        پژوهشی
+                    </a></div>
+                    <div class="uk-badge w3-teal">
+                        1395/04/14
+                    </div>
                     <h3 class="uk-panel-title">
-                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                            مکاترونیک واحد قزوین، یک قطب علمی بزرگ در کشور است.
+                        </a>
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="align-txt">
+                        به گزارش ستاد اطلاع رسانی مسابقات بین المللی ربوکاپ 2016 آلمان، مدیرکل ارتباط با صنعت دانشگاه آزاد اسلامی با اشاره به سطح کیفی بالای مسابقات جهانی ربوکاپ 2016 آلمان، گفت: از نظر کمی نیز با توجه به اینکه برای برخی تیم ها روادید صادر نشده بود، اما خوشبختانه تیم های ایرانی حاضر در مسابقات مقام هایی کسب کردند که نشان می‌دهد علم رباتیک به صورت جدی در ایران دنبال می‌شود.
+                    </p>
                 </div>
             </div>
             <div class="tile is-child w3-white">
                 <div class="uk-panel-teaser" >
-                    <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                    <img src="http://qiau.ac.ir/announce/news/images/13950402135005.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                 </div>
                 <div class="uk-panel uk-panel-box uk-panel-box-hover w3-white" style="min-height: 179px;">
-                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                    <div class="uk-badge w3-teal">10 farvardin</div>
+                    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                        ریاست
+                    </a></div>
+                    <div class="uk-badge w3-teal">
+                        1395/04/02
+                    </div>
                     <h3 class="uk-panel-title">
-                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                        <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                            حامیان مالی مسابقات جهانی ربوکاپ آلمان 2016
+                        </a>
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -348,19 +438,49 @@
             <div class="uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-2 tm-grid-heights" data-uk-grid="{gutter: 20}" style="position: relative; margin-left: -20px; height: 394px;">
 
                 <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
+                <div class="uk-panel-box">
+                    <div class="uk-panel-teaser" >
+                        <img src="http://qiau.ac.ir/announce/news/images/13950408153755.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                    </div>
+                    <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
+                        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                            پژوهشی
+                        </a></div>
+                        <div class="uk-badge w3-teal">
+                            1395/04/08
+                        </div>
+                        <h3 class="uk-panel-title">
+                            <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                اعزام کاروان جمهوری اسلامی ایران به مسابقات جهانی ربوکاپ 2016 آلمان
+                            </a>
+                        </h3>
+                        <p class="align-txt">
+                            به گزارش ستاد اطلاع رسانی مسابقات بین المللی ربوکاپ، دکتر موسی خانی رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران ضمن اشاره به برگزاری مسابقات جهانی ربوکاپ 2016 به میزبانی آلمان، گفت: تیم‌هایی از دانشگاه آزاد اسلامی قزوین، دانشگاه تهران، دانشگاه امیرکبیر، دبیرستان فرزانگان تهران، دبیرستان سلام، تیم کاوش و تیم باسط پژوه راهی این دوره از مسابقات شدند که در شهر لایپزیک برگزار می‌شود.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
                     <div class="uk-panel-box">
                         <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                            <img src="http://www.qiau.ac.ir/announce/news/images/13950412142736.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                         </div>
                         <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                                پژوهشی
+                            </a></div>
+                            <div class="uk-badge w3-teal">
+                                1395/04/12
+                            </div>
                             <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                    تغییر و تحول اساسی در برگزاری لیگ ربات امدادگر واقعی
+                                </a>
                             </h3>
-                            <p>
-                                The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
-                                The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+                            <p class="align-txt">
+                                عضو کمیته اجرایی مسابقات آسیا و اقیانوسیه ربوکاپ با اشاره به تغییر نحوه برگزاری لیگ ربات امدادگر واقعی در مسابقات جهانی ربوکاپ 2016 آلمان، گفت: در این دوره از مسابقات لیگ ربات امدادگر واقعی دچار تغییر و تحولات عمده ای شده است.
                             </p>
                         </div>
                     </div>
@@ -369,33 +489,22 @@
                 <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
                     <div class="uk-panel-box">
                         <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                            <img src="http://qiau.ac.ir/announce/news/images/13950408153755.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                         </div>
                         <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                                پژوهشی
+                            </a></div>
+                            <div class="uk-badge w3-teal">
+                                1395/04/08
+                            </div>
                             <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                    اعزام کاروان جمهوری اسلامی ایران به مسابقات جهانی ربوکاپ 2016 آلمان
+                                </a>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
-                    <div class="uk-panel-box">
-                        <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
-                        </div>
-                        <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
-                            <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
-                            </h3>
-                            <p>
-                                The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
-                                The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+                            <p class="align-txt">
+                                به گزارش ستاد اطلاع رسانی مسابقات بین المللی ربوکاپ، دکتر موسی خانی رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران ضمن اشاره به برگزاری مسابقات جهانی ربوکاپ 2016 به میزبانی آلمان، گفت: تیم‌هایی از دانشگاه آزاد اسلامی قزوین، دانشگاه تهران، دانشگاه امیرکبیر، دبیرستان فرزانگان تهران، دبیرستان سلام، تیم کاوش و تیم باسط پژوه راهی این دوره از مسابقات شدند که در شهر لایپزیک برگزار می‌شود.
 
                             </p>
                         </div>
@@ -405,32 +514,49 @@
                 <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
                     <div class="uk-panel-box">
                         <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                            <img src="http://www.qiau.ac.ir/announce/news/images/13950412142736.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                         </div>
                         <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                                پژوهشی
+                            </a></div>
+                            <div class="uk-badge w3-teal">
+                                1395/04/12
+                            </div>
                             <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                    تغییر و تحول اساسی در برگزاری لیگ ربات امدادگر واقعی
+                                </a>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="align-txt">
+                                عضو کمیته اجرایی مسابقات آسیا و اقیانوسیه ربوکاپ با اشاره به تغییر نحوه برگزاری لیگ ربات امدادگر واقعی در مسابقات جهانی ربوکاپ 2016 آلمان، گفت: در این دوره از مسابقات لیگ ربات امدادگر واقعی دچار تغییر و تحولات عمده ای شده است.
+                            </p>
                         </div>
                     </div>
                 </div>
 
+
+
                 <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
                     <div class="uk-panel-box">
                         <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                            <img src="http://qiau.ac.ir/announce/news/images/13950408153755.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                         </div>
                         <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                                پژوهشی
+                            </a></div>
+                            <div class="uk-badge w3-teal">
+                                1395/04/08
+                            </div>
                             <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                    اعزام کاروان جمهوری اسلامی ایران به مسابقات جهانی ربوکاپ 2016 آلمان
+                                </a>
                             </h3>
-                            <p>
-                                The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+                            <p class="align-txt">
+                                به گزارش ستاد اطلاع رسانی مسابقات بین المللی ربوکاپ، دکتر موسی خانی رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران ضمن اشاره به برگزاری مسابقات جهانی ربوکاپ 2016 به میزبانی آلمان، گفت: تیم‌هایی از دانشگاه آزاد اسلامی قزوین، دانشگاه تهران، دانشگاه امیرکبیر، دبیرستان فرزانگان تهران، دبیرستان سلام، تیم کاوش و تیم باسط پژوه راهی این دوره از مسابقات شدند که در شهر لایپزیک برگزار می‌شود.
+
                             </p>
                         </div>
                     </div>
@@ -439,18 +565,28 @@
                 <div  data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; left: 0px; opacity: 1;">
                     <div class="uk-panel-box">
                         <div class="uk-panel-teaser" >
-                            <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
+                            <img src="http://www.qiau.ac.ir/announce/news/images/13950412142736.jpg" alt="800x280" data-src="holder.js/800x280/lava/auto" data-holder-rendered="true">
                         </div>
                         <div class="uk-panel uk-panel-box uk-panel-box-hover" style="min-height: 179px;">
-                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-                            <div class="uk-badge w3-teal">10 farvardin</div>
+                            <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+                                پژوهشی
+                            </a></div>
+                            <div class="uk-badge w3-teal">
+                                1395/04/12
+                            </div>
                             <h3 class="uk-panel-title">
-                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">tile title</a>
+                                <a href="../html/news-temp.html" class="w3-text-red w3-hover-opacity ">
+                                    تغییر و تحول اساسی در برگزاری لیگ ربات امدادگر واقعی
+                                </a>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="align-txt">
+                                عضو کمیته اجرایی مسابقات آسیا و اقیانوسیه ربوکاپ با اشاره به تغییر نحوه برگزاری لیگ ربات امدادگر واقعی در مسابقات جهانی ربوکاپ 2016 آلمان، گفت: در این دوره از مسابقات لیگ ربات امدادگر واقعی دچار تغییر و تحولات عمده ای شده است.
+                            </p>
                         </div>
                     </div>
                 </div>
+
+
 
 
 
@@ -461,157 +597,163 @@
 
             <div class="hidden-xs hidden-sm">
                 <h4 style="color: firebrick">
-                    Aelayiye
+                    پژوهشی
                 </h4>
                 <hr>
                 <dl class="uk-description-list-line">
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        قابلیت های بالای ربات ما باعث تمجید رییس جهانی لیگ ربات امدادگر واقعی شد.
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        عملکرد فوق العاده تیم MRL در مسابقات جهانی، حاصل سال ها تجربه و تلاش این تیم است.
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        مکاترونیک واحد قزوین، یک قطب علمی بزرگ در کشور است.
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        کاروان علمی جمهوری اسلامی ایران خوش درخشید.
+                    </a></dt>
 
 
                 </dl>
-                <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
+                <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                    بیشتر
+                </a>
 
                 <h4 style="color: firebrick">
-                    Aelayiye
+                    فرهنگی
                 </h4>
                 <hr>
                 <dl class="uk-description-list-line">
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        دیدار و تکریم خانواده دانشجویان نیازمند.
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        برگزاری مراسم سوگواری شهادت حضرت علی (ع) در دانشگاه آزاد اسلامی قزوین.
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        کارگاه آموزشی "اصلاح عادات غذایی در ماه مبارک رمضان"
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        فضای قرآنی دانشگاه آزاد اسلامی قزوین در ماه مبارک رمضان
+                    </a></dt>
 
 
                 </dl>
-                <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
+                <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                    بیشتر
+                </a>
 
                 <h4 style="color: firebrick">
-                    Aelayiye
+                    ریاست
                 </h4>
                 <hr>
                 <dl class="uk-description-list-line">
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        بیانیه دانشگاه آزاد اسلامی قزوین در خصوص روز قدس
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        دانشگاه آزاد اسلامی قزوین و رایتل در مسیر توسعه ی همکاری ها
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        بازدید مدیرعامل بانک شهر از دانشگاه آزاد اسلامی قزوین
+                    </a></dt>
+                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                        حامیان مالی مسابقات جهانی ربوکاپ آلمان 2016
+                    </a></dt>
 
 
                 </dl>
-                <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
-
-                <h4 style="color: firebrick">
-                    Aelayiye
-                </h4>
-                <hr>
-                <dl class="uk-description-list-line">
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
-                    <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                    <dd>A description list defines terms and their corresponding descriptions.</dd>
+                <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                    بیشتر
+                </a>
 
 
-                </dl>
-                <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
 
             </div>
 
             <div class="uk-grid  visible-xs visible-sm" data-uk-grid-margin="">
+                <div class="uk-width-medium-1-2">
+                    <h4 style="color: firebrick">
+                        ریاست
+                    </h4>
+                    <hr>
+                    <dl class="uk-description-list-line">
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            بیانیه دانشگاه آزاد اسلامی قزوین در خصوص روز قدس
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            دانشگاه آزاد اسلامی قزوین و رایتل در مسیر توسعه ی همکاری ها
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            بازدید مدیرعامل بانک شهر از دانشگاه آزاد اسلامی قزوین
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            حامیان مالی مسابقات جهانی ربوکاپ آلمان 2016
+                        </a></dt>
+
+
+                    </dl>
+                    <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                        بیشتر
+                    </a>
+
+
+
+                </div>
                 <div class="uk-width-medium-1-2 uk-row-first">
 
                     <h4 style="color: firebrick">
-                        Aelayiye
+                        پژوهشی
                     </h4>
                     <hr>
                     <dl class="uk-description-list-line">
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            قابلیت های بالای ربات ما باعث تمجید رییس جهانی لیگ ربات امدادگر واقعی شد.
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            عملکرد فوق العاده تیم MRL در مسابقات جهانی، حاصل سال ها تجربه و تلاش این تیم است.
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            مکاترونیک واحد قزوین، یک قطب علمی بزرگ در کشور است.
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            کاروان علمی جمهوری اسلامی ایران خوش درخشید.
+                        </a></dt>
 
 
                     </dl>
-                    <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
+                    <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                        بیشتر
+                    </a>
 
                     <h4 style="color: firebrick">
-                        Aelayiye
+                        فرهنگی
                     </h4>
                     <hr>
                     <dl class="uk-description-list-line">
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            دیدار و تکریم خانواده دانشجویان نیازمند.
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            برگزاری مراسم سوگواری شهادت حضرت علی (ع) در دانشگاه آزاد اسلامی قزوین.
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            کارگاه آموزشی "اصلاح عادات غذایی در ماه مبارک رمضان"
+                        </a></dt>
+                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >
+                            فضای قرآنی دانشگاه آزاد اسلامی قزوین در ماه مبارک رمضان
+                        </a></dt>
 
 
                     </dl>
-                    <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
+                    <a href="../html/news.html" class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">
+                        بیشتر
+                    </a>
+
 
                 </div>
-                <div class="uk-width-medium-1-2">
-                    <h4 style="color: firebrick">
-                        Aelayiye
-                    </h4>
-                    <hr>
-                    <dl class="uk-description-list-line">
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
 
-
-                    </dl>
-                    <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
-
-                    <h4 style="color: firebrick">
-                        Aelayiye
-                    </h4>
-                    <hr>
-                    <dl class="uk-description-list-line">
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-                        <dt><a href="../html/news-temp.html" class="w3-hover-opacity w3-text-black" >Description lists</a></dt>
-                        <dd>A description list defines terms and their corresponding descriptions.</dd>
-
-
-                    </dl>
-                    <button class="uk-button uk-button-mini w3-red w3-hover-grey" type="reset" style="float: left">More</button>
-
-                </div>
             </div>
 
         </div>
@@ -623,102 +765,197 @@
 
 <!-- start of cover -->
 
-<div class="uk-block w3-light-grey ">
-    <div class="pad-con-l pad-con-r pad-con-t" >
-        <div class="uk-grid">
-            <div class="uk-width-medium-1-3 text-center"  >
+    <div class="uk-block w3-light-grey ">
+        <div class="pad-con-l pad-con-r pad-con-t" >
+            <div class="uk-grid ">
 
-                <br>
-                <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-send" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-pink w3-text-white w3-hover-opacity" ><i class="fa fa-instagram" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-blue w3-text-white w3-hover-opacity" ><i class="fa fa-facebook" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-twitter" style="vertical-align: text-bottom" ></i></a>
-                <br>
+                <div class="uk-width-medium-4-10 text-center "  >
+                    <br>
+                    <br>
+                    <div id="wrap" >
+                        <a class="big" href="http://www.instagram.com/qiau.ac"><i class="fa fa-instagram w3-text-pink w3-hover-opacity big"></i></a>
+                        <a class="big" href="http://www.telegram.me/qazviniau"><i class="fa fa-send w3-text-blue w3-hover-opacity big"></i></a>
+                    </div>
+                    <br>
+
+                </div>
 
 
-            </div>
-            <div class="uk-width-medium-2-3 ">
-                <div class="uk-panel-box">
-                    <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fhgbkdbgkjdbgk dkjbgjdbgjd djbgdgbjdbkjg dkjgbkjdbgjkbd bdgbdkjgbkjd dkjbgkdbgkjd kjdbgkjbdgkj.</p>
+                <div class="uk-width-medium-6-10 ">
+                    <div class="uk-panel-box uk-grid" style="direction: ltr!important;margin-left: 5px; " ng-controller="myCtrl">
 
+
+                        <div class="uk-width-2-5 " style="border-right: 2px solid"  >
+                            <h3 class="raleway" style="color: firebrick;font-family: Raleway!important;"><bold>Qazvin</bold></h3>
+                            <p class="raleway">
+                                <span style="color: darkgrey">Pressure:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.pressure}}</span> <span style="color: darkgrey"><b>hPa</b></span><br>
+                                <span style="color: darkgrey">Humidity:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.humidity}}</span> <span style="color: darkgrey"><b>%</b></span><br>
+                                <span style="color: darkgrey">Wind:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].wind.speed}}</span> <span style="color: darkgrey"><b>m/s</b></span><br>
+
+                            </p>
+                        </div>
+
+                        <div class="uk-width-3-5 ">
+
+                            <div class="hidden-lg text-center">
+                                <h6>NOW</h6>
+                                <i ng-class="class0" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                            </div>
+
+                            <ul class="text-center visible-lg">
+                                <li style="display: inline-block">
+                                    <h6>NOW</h6>
+                                    <i ng-class="class0" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                                </li>
+                                <li  style="display: inline-block">
+                                    <h6>+3h</h6>
+                                    <i ng-class="class1" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[1].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                                <li   style="display: inline-block">
+                                    <h6>+6h</h6>
+                                    <i ng-class="class2" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[2].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                                <li   style="display: inline-block">
+                                    <h6>+9h</h6>
+                                    <i ng-class="class3" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[3].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-</div>
-
-<!-- end of cover -->
+    <!-- end of cover -->
 
 
-<!-- start of footer -->
+    <!-- start of footer -->
 
-<div class="uk-block hidden-xs " style="background-color: firebrick">
-    <div class="pad-con-l pad-con-r">
-        <div class="w3-row">
-            <div class="w3-col s9  ">
-                <ul>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li>
-                        <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-col s3  w3-center">
-                <img src="../img/index/foot-logo.png">
+    <div class="uk-block hidden-xs " style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <div class="w3-row">
+                <div class="w3-col s9  ">
+                    <ul>
+                        <li class="date-body foot-brd"><a href="index.html" class="w3-text-white w3-hover-opacity"><b>
+                            صفحه اصلی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نقشه سایت
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            الف تا ی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            پست الکترونیک
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نظرسنجی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                            تابلوی اعلانات
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            موقعیت مکانی دانشگاه
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="#"  class="w3-text-white w3-hover-opacity"><b>
+                            En
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            RSS
+                        </b></a></li>
+                        <li>
+                            <p class="w3-text-grey">
+                                طراح
+                                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                                    سپهر بهنامی فر.
+                                </a>
+                                ©
+                                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-col s3  w3-center">
+                    <img src="../img/index/foot-logo.png">
+                </div>
             </div>
         </div>
+
+
     </div>
 
+    <div class="uk-block visible-xs" style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <table class="uk-table">
 
+                <tr >
+                    <td style="text-align: right;vertical-align: middle">
+                        <img  src="../img/index/foot-logo.png">
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                صفحه اصلی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نقشه سایت
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                الف تا ی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                پست الکترونیک
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نظرسنجی
+                            </b></a></li>
+                        </ul>
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a  href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                                تابلوی اعلانات
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                موقعیت مکانی دانشگاه
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                RSS
+                            </b></a></li>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                En
+                            </b></a></li>
+                        </ul>
+                    </td>
 
-</div>
+                </tr>
 
-
-<div class="uk-block visible-xs" style="background-color: firebrick">
-    <div class="pad-con-l pad-con-r">
-        <table class="uk-table">
-
-            <tr >
-                <td style="text-align: right;vertical-align: middle">
-                    <img  src="../img/index/foot-logo.png">
-                </td>
-                <td style="text-align: right" >
-                    <ul>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    </ul>
-                </td>
-                <td style="text-align: right" >
-                    <ul>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    </ul>
-                </td>
-
-            </tr>
-
-        </table>
-        <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
-
+            </table>
+            <p class="w3-text-grey">
+                طراح
+                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                    سپهر بهنامی فر.
+                </a>
+                ©
+                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+            </p>
+        </div>
     </div>
-</div>
 
 <!-- end of footer -->
 
 </div>
+
+
+<script src="../js/news.js"></script>
+
 </body>
 </html>

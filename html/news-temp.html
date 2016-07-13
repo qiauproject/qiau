@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-    <title>QIAU</title>
+    <title>
+        دانشگـاه آزاد اسلامـي قـزويـن
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="../img/qiau.ico">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
 
     <link rel="stylesheet" href="../css/news-temp.css">
 
@@ -12,6 +19,7 @@
     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/owfont-master/css/owfont-regular.css">
 
 
     <link rel="stylesheet" href="../lib/uikit/css/uikit.min.css">
@@ -36,10 +44,10 @@
     <link rel="stylesheet" href="../lib/uikit/css/components/upload.min.css">
 
 
-    <script src="../js/news-temp.js"></script>
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/uikit/js/uikit.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../lib/angularjs/angular.min.js"></script>
 
 
     <script src="../lib/uikit/js/uikit.min.js"></script>
@@ -87,7 +95,7 @@
 
 
 </head>
-<body >
+<body ng-app="myApp">
 
 <!-- start of header -->
 <div dir="rtl">
@@ -103,7 +111,7 @@
                     <ul class="uk-navbar-nav nav-search" >
                         <div class="control is-grouped">
                             <p class="control is-danger">
-                                <input class="input is-danger" type="text" placeholder="Find a repository">
+                                <input class="input is-danger" type="text" placeholder="جستجو">
                             </p>
                             <p class="control search-btn">
                                 <a class="button is-danger">
@@ -115,6 +123,7 @@
                 </div>
             </nav>
         </div>
+
         <div class="w3-accordion w3-light-grey visible-xs">
 
             <button onclick="myFunction('Mobile-Menu')" class="w3-btn-block head-btn  head-brn-once "><i class="fa fa-navicon"></i></button>
@@ -122,7 +131,7 @@
                 <br>
                 <div class="control is-grouped w3-margin-right" >
                     <p class="control is-danger">
-                        <input class="input is-danger" type="text" placeholder="Find a repository">
+                        <input class="input is-danger" type="text" placeholder="جستجو">
                     </p>
                     <p class="control search-btn">
                         <a class="button is-danger">
@@ -130,32 +139,41 @@
                         </a>
                     </p>
                 </div>
-                <a class="w3-text-red" href="#">Link 1</a>
-                <div class="w3-accordion">
-                    <a class="w3-text-red" onclick="myAccFunc('demoAcc')" href="#">
-                        link 2 <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div id="demoAcc" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
 
-                    </div>
-                </div>
+                <a class="w3-text-red" href="../index.html">
+                    <i class="fa fa-home"></i>
+                    خانه
+                </a>
 
-                <a class="w3-text-red" href="#">Link 3</a>
+                <a class="w3-text-red" href="../html/about.html">
+                    درباره دانشگاه
+                </a>
+
+                <a class="w3-text-red" href="../html/template.html">
+                    ارتباط با ما
+                </a>
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc1')" href="#">
-                        link 4 <i class="fa fa-caret-down"></i>
+                        دانشکده ها
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc1" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc1" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده مديريت و حسابداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  عمران و نقشه برداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  معماري وشهرسازي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده صنايع و مکانيک
+                        </a>
 
 
                     </div>
@@ -163,13 +181,22 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc2')" href="#">
-                        link 5 <i class="fa fa-caret-down"></i>
+                        اساتید
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc2" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
+                    <div id="demoAcc2" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            اعضاي هيات علمي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرمها و آئين نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال اساتيد
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
                     </div>
@@ -177,102 +204,140 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc3')" href="#">
-                        link 6 <i class="fa fa-caret-down"></i>
+                        دانشجويان
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc3" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc3" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/user.html">
+                            اطلاع رساني تحصيلي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرم هاي آموزشي - پژوهشي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            روال امور آموزشي و دانشجويي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
 
                     </div>
                 </div>
 
-                <a class="w3-text-red" href="#">Link 7</a>
-                <a class="w3-text-red" href="#">Link 8</a>
-                <a class="w3-text-red" href="#">Link 9</a>
-                <a class="w3-text-red" href="#">Link 10</a>
+                <a class="w3-text-red" href="http://nahad.qiau.ac.ir/">
+                    نهاد نمايندگي مقام معظم رهبري
+                </a>
+                <a class="w3-text-red" href="http://cul.qiau.ac.ir/">
+                    فرهنگي
+                </a>
+                <a class="w3-text-red" href="http://iau.ac.ir/">
+                    سازمان مرکزي دانشگاه آزاد
+                </a>
+                <a class="w3-text-red" href="../html/template.html">
+                    نشریات
+                </a>
             </div>
-            <script>
-                function myFunction(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
 
-                function myAccFunc(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                        x.previousElementSibling.className += " w3-opacity w3-grey";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                        x.previousElementSibling.className =
-                                x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
-                    }
-                }
-            </script>
         </div>
         <div class="w3-row hidden-xs  ">
 
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">1</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">2</a>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">3</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">4</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                نشریات
+            </a>
+            <a href="http://iau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf" >
+                سازمان مرکزي دانشگاه آزاد
+            </a>
+            <a href="http://cul.qiau.ac.ir/" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                فرهنگي
+            </a>
+            <a href="http://nahad.qiau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf">
+                نهاد نمايندگي مقام معظم رهبري
+            </a>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">5 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشجويان
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/user.html" class="w3-hover-red ">
+                            اطلاع رساني تحصيلي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرم هاي آموزشي - پژوهشي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            روال امور آموزشي و دانشجويي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">6 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    اساتید
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            اعضاي هيات علمي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرمها و آئين نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال اساتيد
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">7 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشکده ها
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده مديريت و حسابداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  عمران و نقشه برداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  معماري وشهرسازي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده صنايع و مکانيک
+                        </a></li>
                     </ul>
                 </div>
             </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">8</a>
-            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">9 <i class="uk-icon-caret-down"></i></a>
-                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
-                    <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">10</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                ارتباط با ما
+            </a>
+            <a href="../html/about.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                درباره دانشگاه
+            </a>
+            <a href="../index.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                <i class="fa fa-home"></i>
+
+                خانه
+            </a>
         </div>
     </div>
 
@@ -280,49 +345,95 @@
 
 <div class="pad-con-b pad-con-l pad-con-r  pad-con-t">
 
-    <h2 style="color: firebrick">10 july</h2>
-    <h1>title title title title title title title title title title title</h1>
-    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-    <p>
-        The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
-        The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+    <h2 style="color: firebrick">
+        1395/04/14
+    </h2>
+    <h1>
+        پایان مسابقات جهانی ربوکاپ 2016 آلمان با کسب 13 مقام؛
+        کاروان علمی جمهوری اسلامی ایران خوش درخشید
+    </h1>
+    <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+        پژوهشی
+    </a></div>
+    <p class="align-txt">
+        بزرگترین و معتبرترین رقابت رباتیک جهان با کسب 13 مقام برای کاروان علمی جمهوری اسلامی ایران در شهر لایپزیک آلمان به پایان رسید.
+
+        به گزارش ستاد اطلاع رسانی مسابقات جهانی ربوکاپ 2016 آلمان، رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران با اعلام این خبر، افزود: پس از 3 روز رقابت فشرده و نفسگیر، تیم های ایرانی موفق به کسب 13 مقام در مسابقات جهانی ربوکاپ 2016 آلمان شدند که تیم MRL دانشگاه آزاد اسلامی قزوین با کسب 6 مقام به عنوان پرافتخارترین تیم این دوره از مسابقات دست یافت.
+
+        دکتر موسی خانی با اشاره به پایان مسابقات، در خصوص نتایج تیم های ایرانی، گفت: در مسابقات بخش دانش آموزی و در لیگ امدادگر سطح الف تیم کاوش از دبیرستان نقش قلم رتبه ی دوم انفرادی را کسب کرد. این تیم همچنین عنوان بهترین طراحی سخت افزار را در این لیگ به خود اختصاص داد.
     </p>
-    <p class="uk-clearfix"><img class="uk-align-left " src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="300px" height="300px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p class="uk-clearfix align-txt">
+        <a href="#my-id0" data-uk-modal class="w3-hover-opacity uk-align-left">
+            <img  src="http://www.qiau.ac.ir/announce/news/images/13950414100020.jpg" width="300px" height="300px">
+        </a>
+        وی افزود: در لیگ امداد فضای مشترک (co-space) دانش آموزی نیز عنوان بهترین ارائه فنی به تیم دبیرستان علامه طباطبائی (دوره اول) رسید.
+
+        رییس کمیته ملی ربوکاپ کشورمان ادامه داد: اما در مسابقات بخش بزرگسال یا دانشجویی نیز تیم ربات فوتبالیست سایز کوچک MRL دانشگاه آزاد اسلامی قزوین، قهرمان جهان شد.
+
+        به گفته ی این مقام مسوول، در لیگ ربات شبیه ساز عامل امداد نیز در رقابت اصلی تیم MRL دانشگاه آزاد اسلامی قزوین با کسب مقام نخست، قهرمانی جهان را از آن خود کرد. تیم دبیرستان فرزانگان تهران در این بخش دوم شد.
+
+        وی خاطرنشان کرد: همچنین در لیگ ربات شبیه ساز عامل امداد در شاخه ی توسعه ی زیر ساخت تیم MRL دانشگاه آزاد اسلامی قزوین به مقام نخست رسید. این تیم مقام اول بخش رقابت فنی را نیز به خود اختصاص داد.
+
+        رییس کمیته ملی ربوکاپ جمهوری اسلامی ایران گفت: در لیگ امدادگر واقعی تیم MRL دانشگاه آزاد اسلامی قزوین با اختلاف 8 امتیاز پس از نماینده تایلند، نایب قهرمان شد. این تیم در بخش رقابت فنی به مقام نخست دست یافت.
+
+        دکتر موسی خانی افزود: در لیگ فوتبالیست انسان نما (بزرگسال) تیم باسط پژوه به مقام نخست دست یافت و تیم دانشگاه آزاد اسلامی ایلخچی تبریز پس از آلمان به مقام سوم رسید.
+
+        وی ادامه داد: در لیگ فوتبالیست انسان نما (سایز نوجوان) در بخش رقابت فنی تیم دانشگاه امیرکبیر به مقام نخست این مسابقات رسید.
+
+        دکتر موسی خانی در پایان یادآور شد: این پیروزی های ارزشمند برگ زرین دیگری بر افتخارات پرشمار ایران در عرصه ی رباتیک جهان بود که در آستانه ی عید سعید فطر آن را به رهبر معظم انقلاب، حضرت آیت اله هاشمی، دکتر روحانی، دکتر  میرزاده و جامعه ی علمی کشور تبریک می گوییم.
+
+    </p>
+    <div id="my-id0" class="uk-modal">
+        <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+            <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+            <img src="http://www.qiau.ac.ir/announce/news/images/13950414100020.jpg" alt="" width="100%">
+        </div>
+    </div>
+
+    <p class="align-txt">
+        شایان ذکر است؛ بانک شهر، بانک ملی ایران، بانک ملت، شرکت رایتل، شرکت سندن ایرانیان، مجموعه ی تالار شهر، شرکت آپادانا سرام و شرکت سایپا پرس حامیان مالی تیم MRL دانشگاه آزاد اسلامی قزوین به عنوان پرافتخارترین تیم این دوره از مسابقات بودند.
+
+
+    </p>
+
+
+
     <div class="uk-margin hidden-xs" data-uk-margin="">
         <a href="#my-id" data-uk-modal class="w3-hover-opacity">
-            <img class="uk-thumbnail" src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="24.5%" height="100" alt="">
+            <img class="uk-thumbnail" src="http://www.qiau.ac.ir/announce/news/images/13950414100013.jpg" width="24.5%" height="100%" alt="">
         </a>
         <div id="my-id" class="uk-modal">
             <div class="uk-modal-dialog uk-modal-dialog-lightbox">
                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="" width="100%">
+                <img src="http://www.qiau.ac.ir/announce/news/images/13950414100013.jpg" alt="" width="100%">
             </div>
         </div>
         <a href="#my-id1" data-uk-modal class="w3-hover-opacity">
-            <img class="uk-thumbnail" src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="24.5%" height="100" alt="">
+            <img class="uk-thumbnail" src="http://www.qiau.ac.ir/announce/news/images/13950414100017.jpg" width="24.5%" height="100%" alt="">
         </a>
         <div id="my-id1" class="uk-modal">
             <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="" width="100%">
+                <a ref="" class="uk-modal-close uk-close uk-close-alt"></a>
+                <img src="http://www.qiau.ac.ir/announce/news/images/13950414100017.jpg" alt="" width="100%">
             </div>
         </div>
         <a href="#my-id2" data-uk-modal class="w3-hover-opacity">
-            <img class="uk-thumbnail" src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="24.5%" height="100" alt="">
+            <img class="uk-thumbnail" src="http://www.qiau.ac.ir/announce/news/images/13950414100015.jpg" width="24.5%" height="100%" alt="">
         </a>
         <div id="my-id2" class="uk-modal">
             <div class="uk-modal-dialog uk-modal-dialog-lightbox">
                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="" width="100%">
+                <img src="http://www.qiau.ac.ir/announce/news/images/13950414100015.jpg" alt="" width="100%">
             </div>
         </div>
         <a href="#my-id3" data-uk-modal class="w3-hover-opacity">
-            <img class="uk-thumbnail" src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" width="24.5%" height="100" alt="">
+            <img class="uk-thumbnail" src="http://www.qiau.ac.ir/announce/news/images/13950414100023.jpg" width="24.5%" height="100%" alt="">
         </a>
         <div id="my-id3" class="uk-modal">
             <div class="uk-modal-dialog uk-modal-dialog-lightbox">
                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="" width="100%">
+                <img src="http://www.qiau.ac.ir/announce/news/images/13950414100023.jpg" alt="" width="100%">
             </div>
         </div>
 
@@ -330,17 +441,20 @@
 
     <div class="uk-margin-small-top visible-xs">
 
-        <div data-uk-slideshow="" class="pad-con-l pad-con-r">
+        <div data-uk-slideshow="{autoplay:true}" class="pad-con-l pad-con-r">
             <div class="uk-slidenav-position uk-margin">
                 <ul class="uk-slideshow" style="height: 366px;">
                     <li aria-hidden="false" class="uk-active" style="animation-duration: 500ms; height: 366px;"><div class="uk-cover-background uk-position-cover" ></div>
-                        <img src="http://qiau.ac.ir/PhotoGallery/images/13900823112033.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
+                        <img src="http://www.qiau.ac.ir/announce/news/images/13950414100013.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
                     </li>
                     <li aria-hidden="true" style="animation-duration: 500ms; height: 366px;" class=""><div class="uk-cover-background uk-position-cover" ></div>
-                        <img src="http://qiau.ac.ir/PhotoGallery/images/13910721140246.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
+                        <img src="http://www.qiau.ac.ir/announce/news/images/13950414100017.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
                     </li>
                     <li aria-hidden="true" style="animation-duration: 500ms; height: 366px;" class=""><div class="uk-cover-background uk-position-cover" ></div>
-                        <img src="http://qiau.ac.ir/PhotoGallery/images/13910721135811.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
+                        <img src="http://www.qiau.ac.ir/announce/news/images/13950414100015.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
+                    </li>
+                    <li aria-hidden="true" style="animation-duration: 500ms; height: 366px;" class=""><div class="uk-cover-background uk-position-cover" ></div>
+                        <img src="http://www.qiau.ac.ir/announce/news/images/13950414100023.jpg" alt="" style="width: 100%; height: auto; opacity: 0;">
                     </li>
                 </ul>
                 <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
@@ -353,10 +467,10 @@
 
     <hr>
     <div class="pad-con-r pad-con-r text-center">
-        <a><i class="fa fa-send w3-xxxlarge w3-text-teal w3-hover-opacity"></i></a>
-        <a><i class="fa fa-facebook w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
-        <a><i class="fa fa-twitter w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
-        <a><i class="fa fa-instagram w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+        <a href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fsharingbuttons.io&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking."><i class="fa fa-envelope w3-xxxlarge w3-text-teal w3-hover-opacity"></i></a>
+        <a href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-facebook w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-twitter w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+        <a href="https://plus.google.com/share?url=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-google w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
     </div>
 
 
@@ -377,21 +491,65 @@
 
 <div class="uk-block w3-light-grey ">
     <div class="pad-con-l pad-con-r pad-con-t" >
-        <div class="uk-grid">
-            <div class="uk-width-medium-1-3 text-center"  >
+        <div class="uk-grid ">
 
+            <div class="uk-width-medium-4-10 text-center "  >
                 <br>
-                <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-send" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-pink w3-text-white w3-hover-opacity" ><i class="fa fa-instagram" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-blue w3-text-white w3-hover-opacity" ><i class="fa fa-facebook" style="vertical-align: text-bottom" ></i></a>
-                <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-twitter" style="vertical-align: text-bottom" ></i></a>
                 <br>
-
+                <div id="wrap" >
+                    <a class="big" href="http://www.instagram.com/qiau.ac"><i class="fa fa-instagram w3-text-pink w3-hover-opacity big"></i></a>
+                    <a class="big" href="http://www.telegram.me/qazviniau"><i class="fa fa-send w3-text-blue w3-hover-opacity big"></i></a>
+                </div>
+                <br>
 
             </div>
-            <div class="uk-width-medium-2-3 ">
-                <div class="uk-panel-box">
-                    <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fhgbkdbgkjdbgk dkjbgjdbgjd djbgdgbjdbkjg dkjgbkjdbgjkbd bdgbdkjgbkjd dkjbgkdbgkjd kjdbgkjbdgkj.</p>
+
+
+            <div class="uk-width-medium-6-10 ">
+                <div class="uk-panel-box uk-grid" style="direction: ltr!important;margin-left: 5px; " ng-controller="myCtrl">
+
+
+                    <div class="uk-width-2-5 " style="border-right: 2px solid"  >
+                        <h3 class="raleway" style="color: firebrick;font-family: Raleway!important;"><bold>Qazvin</bold></h3>
+                        <p class="raleway">
+                            <span style="color: darkgrey">Pressure:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.pressure}}</span> <span style="color: darkgrey"><b>hPa</b></span><br>
+                            <span style="color: darkgrey">Humidity:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.humidity}}</span> <span style="color: darkgrey"><b>%</b></span><br>
+                            <span style="color: darkgrey">Wind:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].wind.speed}}</span> <span style="color: darkgrey"><b>m/s</b></span><br>
+
+                        </p>
+                    </div>
+
+                    <div class="uk-width-3-5 ">
+
+                        <div class="hidden-lg text-center">
+                            <h6>NOW</h6>
+                            <i ng-class="class0" class="owf owf-5x"></i>
+                            <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                        </div>
+
+                        <ul class="text-center visible-lg">
+                            <li style="display: inline-block">
+                                <h6>NOW</h6>
+                                <i ng-class="class0" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                            </li>
+                            <li  style="display: inline-block">
+                                <h6>+3h</h6>
+                                <i ng-class="class1" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[1].main.temp | number: 0 }}<sup>o</sup>C</p>
+                            </li>
+                            <li   style="display: inline-block">
+                                <h6>+6h</h6>
+                                <i ng-class="class2" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[2].main.temp | number: 0 }}<sup>o</sup>C</p>
+                            </li>
+                            <li   style="display: inline-block">
+                                <h6>+9h</h6>
+                                <i ng-class="class3" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[3].main.temp | number: 0 }}<sup>o</sup>C</p>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -405,72 +563,122 @@
 
 <!-- start of footer -->
 
-<div class="uk-block hidden-xs " style="background-color: firebrick">
-    <div class="pad-con-l pad-con-r">
-        <div class="w3-row">
-            <div class="w3-col s9  ">
-                <ul>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    <li>
-                        <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-col s3  w3-center">
-                <img src="../img/index/foot-logo.png">
+    <div class="uk-block hidden-xs " style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <div class="w3-row">
+                <div class="w3-col s9  ">
+                    <ul>
+                        <li class="date-body foot-brd"><a href="index.html" class="w3-text-white w3-hover-opacity"><b>
+                            صفحه اصلی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نقشه سایت
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            الف تا ی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            پست الکترونیک
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نظرسنجی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                            تابلوی اعلانات
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            موقعیت مکانی دانشگاه
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="#"  class="w3-text-white w3-hover-opacity"><b>
+                            En
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            RSS
+                        </b></a></li>
+                        <li>
+                            <p class="w3-text-grey">
+                                طراح
+                                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                                    سپهر بهنامی فر.
+                                </a>
+                                ©
+                                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-col s3  w3-center">
+                    <img src="../img/index/foot-logo.png">
+                </div>
             </div>
         </div>
+
+
     </div>
 
+    <div class="uk-block visible-xs" style="background-color: firebrick">
+        <div class="pad-con-l pad-con-r">
+            <table class="uk-table">
 
+                <tr >
+                    <td style="text-align: right;vertical-align: middle">
+                        <img  src="../img/index/foot-logo.png">
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                صفحه اصلی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نقشه سایت
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                الف تا ی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                پست الکترونیک
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نظرسنجی
+                            </b></a></li>
+                        </ul>
+                    </td>
+                    <td style="text-align: right" >
+                        <ul>
+                            <li ><a  href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                                تابلوی اعلانات
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                موقعیت مکانی دانشگاه
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                RSS
+                            </b></a></li>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                En
+                            </b></a></li>
+                        </ul>
+                    </td>
 
-</div>
+                </tr>
 
-
-<div class="uk-block visible-xs" style="background-color: firebrick">
-    <div class="pad-con-l pad-con-r">
-        <table class="uk-table">
-
-            <tr >
-                <td style="text-align: right;vertical-align: middle">
-                    <img  src="../img/index/foot-logo.png">
-                </td>
-                <td style="text-align: right" >
-                    <ul>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    </ul>
-                </td>
-                <td style="text-align: right" >
-                    <ul>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                    </ul>
-                </td>
-
-            </tr>
-
-        </table>
-        <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
-
+            </table>
+            <p class="w3-text-grey">
+                طراح
+                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                    سپهر بهنامی فر.
+                </a>
+                ©
+                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+            </p>
+        </div>
     </div>
-</div>
 
 <!-- end of footer -->
 
 </div>
+
+<script src="../js/news-temp.js"></script>
+
 </body>
 </html>
