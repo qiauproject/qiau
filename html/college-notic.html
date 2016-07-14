@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-    <title>QIAU</title>
+    <title>
+        دانشگـاه آزاد اسلامـي قـزويـن
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../img/qiau.ico">
 
     <link rel="stylesheet" href="../css/college-notic.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
 
     <link rel="stylesheet" href="../lib/bulma/bulma.css">
     <link rel="stylesheet" href="../lib/w3/w3.css">
     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../lib/owfont-master/css/owfont-regular.css">
 
 
     <link rel="stylesheet" href="../lib/uikit/css/uikit.min.css">
@@ -36,10 +42,11 @@
     <link rel="stylesheet" href="../lib/uikit/css/components/upload.min.css">
 
 
-    <script src="../js/college-notic.js"></script>
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/uikit/js/uikit.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../lib/angularjs/angular.min.js"></script>
+
 
 
     <script src="../lib/uikit/js/uikit.min.js"></script>
@@ -87,9 +94,10 @@
 
 
 </head>
-<body >
+<body ng-app="myApp">
 
 <!-- start of header -->
+
 <div dir="rtl">
 
     <div>
@@ -103,7 +111,7 @@
                     <ul class="uk-navbar-nav nav-search" >
                         <div class="control is-grouped">
                             <p class="control is-danger">
-                                <input class="input is-danger" type="text" placeholder="Find a repository">
+                                <input class="input is-danger" type="text" placeholder="جستجو">
                             </p>
                             <p class="control search-btn">
                                 <a class="button is-danger">
@@ -115,6 +123,7 @@
                 </div>
             </nav>
         </div>
+
         <div class="w3-accordion w3-light-grey visible-xs">
 
             <button onclick="myFunction('Mobile-Menu')" class="w3-btn-block head-btn  head-brn-once "><i class="fa fa-navicon"></i></button>
@@ -122,7 +131,7 @@
                 <br>
                 <div class="control is-grouped w3-margin-right" >
                     <p class="control is-danger">
-                        <input class="input is-danger" type="text" placeholder="Find a repository">
+                        <input class="input is-danger" type="text" placeholder="جستجو">
                     </p>
                     <p class="control search-btn">
                         <a class="button is-danger">
@@ -130,32 +139,41 @@
                         </a>
                     </p>
                 </div>
-                <a class="w3-text-red" href="#">Link 1</a>
-                <div class="w3-accordion">
-                    <a class="w3-text-red" onclick="myAccFunc('demoAcc')" href="#">
-                        link 2 <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div id="demoAcc" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
 
-                    </div>
-                </div>
+                <a class="w3-text-red" href="../index.html">
+                    <i class="fa fa-home"></i>
+                    خانه
+                </a>
 
-                <a class="w3-text-red" href="#">Link 3</a>
+                <a class="w3-text-red" href="../html/about.html">
+                    درباره دانشگاه
+                </a>
+
+                <a class="w3-text-red" href="../html/template.html">
+                    ارتباط با ما
+                </a>
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc1')" href="#">
-                        link 4 <i class="fa fa-caret-down"></i>
+                        دانشکده ها
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc1" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc1" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده مديريت و حسابداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  عمران و نقشه برداري
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده  معماري وشهرسازي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            دانشکده صنايع و مکانيک
+                        </a>
 
 
                     </div>
@@ -163,13 +181,22 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc2')" href="#">
-                        link 5 <i class="fa fa-caret-down"></i>
+                        اساتید
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc2" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
+                    <div id="demoAcc2" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/template.html">
+                            اعضاي هيات علمي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرمها و آئين نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال اساتيد
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
                     </div>
@@ -177,102 +204,140 @@
 
                 <div class="w3-accordion">
                     <a class="w3-text-red" onclick="myAccFunc('demoAcc3')" href="#">
-                        link 6 <i class="fa fa-caret-down"></i>
+                        دانشجويان
+                        <i class="fa fa-caret-down"></i>
                     </a>
-                    <div id="demoAcc3" class="w3-accordion-content w3-grey ">
-                        <a class="w3-text-red" href="#">sub-Link 1</a>
-                        <a class="w3-text-red" href="#">sub-Link 2</a>
-                        <a class="w3-text-red" href="#">sub-Link 3</a>
-                        <a class="w3-text-red" href="#">sub-Link 4</a>
-                        <a class="w3-text-red" href="#">sub-Link 5</a>
+                    <div id="demoAcc3" class="w3-accordion-content w3-white ">
+                        <a class="w3-text-red" href="../html/user.html">
+                            اطلاع رساني تحصيلي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            فرم هاي آموزشي - پژوهشي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            روال امور آموزشي و دانشجويي
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a>
+                        <a class="w3-text-red" href="../html/template.html">
+                            پرتال کتابخانه
+                        </a>
 
 
 
                     </div>
                 </div>
 
-                <a class="w3-text-red" href="#">Link 7</a>
-                <a class="w3-text-red" href="#">Link 8</a>
-                <a class="w3-text-red" href="#">Link 9</a>
-                <a class="w3-text-red" href="#">Link 10</a>
+                <a class="w3-text-red" href="http://nahad.qiau.ac.ir/">
+                    نهاد نمايندگي مقام معظم رهبري
+                </a>
+                <a class="w3-text-red" href="http://cul.qiau.ac.ir/">
+                    فرهنگي
+                </a>
+                <a class="w3-text-red" href="http://iau.ac.ir/">
+                    سازمان مرکزي دانشگاه آزاد
+                </a>
+                <a class="w3-text-red" href="../html/template.html">
+                    نشریات
+                </a>
             </div>
-            <script>
-                function myFunction(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
 
-                function myAccFunc(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                        x.previousElementSibling.className += " w3-opacity w3-grey";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                        x.previousElementSibling.className =
-                                x.previousElementSibling.className.replace(" w3-opacity w3-grey", "");
-                    }
-                }
-            </script>
         </div>
         <div class="w3-row hidden-xs  ">
 
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">1</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">2</a>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">3</a>
-            <a href="#" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn">4</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                نشریات
+            </a>
+            <a href="http://iau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf" >
+                سازمان مرکزي دانشگاه آزاد
+            </a>
+            <a href="http://cul.qiau.ac.ir/" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                فرهنگي
+            </a>
+            <a href="http://nahad.qiau.ac.ir/" class="w3-col m2 w3-btn  w3-center w3-text-white head-btn overf">
+                نهاد نمايندگي مقام معظم رهبري
+            </a>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">5 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشجويان
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/user.html" class="w3-hover-red ">
+                            اطلاع رساني تحصيلي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرم هاي آموزشي - پژوهشي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            روال امور آموزشي و دانشجويي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            مشاهده اطلاعات پايان نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">6 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    اساتید
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            اعضاي هيات علمي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            فرمها و آئين نامه ها
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال اساتيد
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            پرتال کتابخانه
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">7 <i class="uk-icon-caret-down"></i></a>
+                <a class="w3-btn  w3-center w3-text-white head-btn overf">
+                    دانشکده ها
+                    <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
                     <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Separated item</a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده برق، رايانه و فناوري اطلاعات
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده مديريت و حسابداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  عمران و نقشه برداري
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده  معماري وشهرسازي
+                        </a></li>
+                        <li class="bor-btn"><a href="../html/template.html" class="w3-hover-red">
+                            دانشکده صنايع و مکانيک
+                        </a></li>
                     </ul>
                 </div>
             </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">8</a>
-            <div class="uk-button-dropdown w3-col m1" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                <a class="w3-btn  w3-center w3-text-white head-btn">9 <i class="uk-icon-caret-down"></i></a>
-                <div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
-                    <ul class="uk-nav uk-nav-dropdown">
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                        <li><a href="#" class="w3-hover-red">Item</a></li>
-                        <li><a href="#" class="w3-hover-red">Another item</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn">10</a>
+            <a href="../html/template.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                ارتباط با ما
+            </a>
+            <a href="../html/about.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                درباره دانشگاه
+            </a>
+            <a href="../index.html" class="w3-col m1 w3-btn  w3-center w3-text-white head-btn overf">
+                <i class="fa fa-home"></i>
+
+                خانه
+            </a>
         </div>
     </div>
 
@@ -280,39 +345,66 @@
 
     <div class="pad-con-b pad-con-l pad-con-r  pad-con-t">
 
-        <h2 style="color: firebrick">10 july</h2>
-        <h1>title title title title title title title title title title title</h1>
-        <div class="uk-badge w3-light-blue"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-        <div class="uk-badge w3-light-green"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-        <div class="uk-badge w3-orange"><a class="w3-text-blue-grey w3-hover-opacity">tag tag</a></div>
-        <p>
-            The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
-            The numbers of antibiotic-resistant bacteria are increasing globally, threatening human health. An undergraduate entrepreneurship program run by Stanford ChEM-H is helping students design and test new drugs to combat the resistant bacteria.
+        <h2 style="color: firebrick">
+            1395/04/23
+        </h2>
+        <h1>
+            نكات قابل توجه دانشجويان تحصيلات تكميلي دانشكده مديريت و حسابداري كه از پايان نامه خود دفاع نموده اند.
+        </h1>
+        <div class="uk-badge w3-light-blue"><a class="w3-text-blue-grey w3-hover-opacity">
+            دانشكده
+        </a></div>
+        <div class="uk-badge w3-light-green"><a class="w3-text-blue-grey w3-hover-opacity">
+            تکمیلی
+        </a></div>
+        <div class="uk-badge w3-amber"><a class="w3-text-blue-grey w3-hover-opacity">
+
+        </a></div>
+        <div class="uk-badge w3-orange"><a class="w3-text-blue-grey w3-hover-opacity">
+
+        </a></div>
+        <p class="align-txt">
+            قابل توجه دانشجويان تحصيلات تکميلي که از پايان نامه دفاع نموده اند
         </p>
         <ul class="pad-con-r" style="list-style-type:disc">
             <li>
-                The numbers of antibiotic-resistant bacteria are increasing globally.
+                نمره پايان نامه شما ظرف مدت 15-10 روز پس از ارايه مقاله يا انصراف از مقاله در پرتال دانشجويي شما ثبت خواهد گرديد.
             </li>
             <li>
-                The numbers of antibiotic-resistant bacteria are increasing globally.
+                پس از رويت نمره در پرتال جهت دريافت تصوير صورتجلسه دفاع خود با داخلي 4008 سرکار خانم اميدي تماس حاصل فرماييد.
             </li>
             <li>
-                The numbers of antibiotic-resistant bacteria are increasing globally.
+                پس از دريافت ايميل حاوي صورتجلسه دفاع ،صحافي پايان نامه را انجام دهيد .
             </li>
             <li>
-                The numbers of antibiotic-resistant bacteria are increasing globally.
+                لزوما در هنگام مراجعه به دانشگاه جهت تحويل پايان نامه و تسويه پژوهشي مدارک زير را به همراه داشته باشيد .
+                <ul class="pad-con-r" style="list-style-type:disc">
+                    <li>
+                        فرم تسويه پايان نامه
+                    </li>
+                    <li>
+                        ک جلد صحافي + يک عدد CD حاوي فايل word , Pdf
+                    </li>
+                    <li>
+                        يک عدد CD حاوي فايل word , Pdf جهت تحويل به دفتر کل پژوهشي
+                    </li>
+                    <li>
+                        2 برگ تصوير صورتجلسه دفاع
+                    </li>
+                </ul>
             </li>
         </ul>
-
+        <p class="align-txt">
+            لطفا مدارک ذکر شده را تهيه نموده و در ابتدا به دفتر تحصيلات تکميلي دانشکده مراجعه نماييد .
+        </p>
 
 
         <hr>
         <div class="pad-con-r pad-con-r text-center">
-            <a><i class="fa fa-send w3-xxxlarge w3-text-teal w3-hover-opacity"></i></a>
-            <a><i class="fa fa-facebook w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
-            <a><i class="fa fa-twitter w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
-            <a><i class="fa fa-instagram w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fsharingbuttons.io&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking."><i class="fa fa-envelope w3-xxxlarge w3-text-teal w3-hover-opacity"></i></a>
+            <a href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-facebook w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+            <a href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-twitter w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
+            <a href="https://plus.google.com/share?url=http%3A%2F%2Fsharingbuttons.io"><i class="fa fa-google w3-xxxlarge w3-text-teal  w3-hover-opacity"></i></a>
         </div>
 
 
@@ -331,23 +423,68 @@
 
     <!-- start of cover -->
 
+
     <div class="uk-block w3-light-grey ">
         <div class="pad-con-l pad-con-r pad-con-t" >
-            <div class="uk-grid">
-                <div class="uk-width-medium-1-3 text-center"  >
+            <div class="uk-grid ">
 
+                <div class="uk-width-medium-4-10 text-center "  >
                     <br>
-                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-send" style="vertical-align: text-bottom" ></i></a>
-                    <a class="w3-btn-floating w3-pink w3-text-white w3-hover-opacity" ><i class="fa fa-instagram" style="vertical-align: text-bottom" ></i></a>
-                    <a class="w3-btn-floating w3-blue w3-text-white w3-hover-opacity" ><i class="fa fa-facebook" style="vertical-align: text-bottom" ></i></a>
-                    <a class="w3-btn-floating w3-light-blue w3-text-white w3-hover-opacity" ><i class="fa fa-twitter" style="vertical-align: text-bottom" ></i></a>
                     <br>
-
+                    <div id="wrap" >
+                        <a class="big" href="http://www.instagram.com/qiau.ac"><i class="fa fa-instagram w3-text-pink w3-hover-opacity big"></i></a>
+                        <a class="big" href="http://www.telegram.me/qazviniau"><i class="fa fa-send w3-text-blue w3-hover-opacity big"></i></a>
+                    </div>
+                    <br>
 
                 </div>
-                <div class="uk-width-medium-2-3 ">
-                    <div class="uk-panel-box">
-                        <p>Lorem <a href="#">ipsum dolor</a> sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fhgbkdbgkjdbgk dkjbgjdbgjd djbgdgbjdbkjg dkjgbkjdbgjkbd bdgbdkjgbkjd dkjbgkdbgkjd kjdbgkjbdgkj.</p>
+
+
+                <div class="uk-width-medium-6-10 ">
+                    <div class="uk-panel-box uk-grid" style="direction: ltr!important;margin-left: 5px; " ng-controller="myCtrl">
+
+
+                        <div class="uk-width-2-5 " style="border-right: 2px solid"  >
+                            <h3 class="raleway" style="color: firebrick;font-family: Raleway!important;"><bold>Qazvin</bold></h3>
+                            <p class="raleway">
+                                <span style="color: darkgrey">Pressure:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.pressure}}</span> <span style="color: darkgrey"><b>hPa</b></span><br>
+                                <span style="color: darkgrey">Humidity:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].main.humidity}}</span> <span style="color: darkgrey"><b>%</b></span><br>
+                                <span style="color: darkgrey">Wind:</span> <span class="raleway" style="text-decoration: underline">{{data.list[0].wind.speed}}</span> <span style="color: darkgrey"><b>m/s</b></span><br>
+
+                            </p>
+                        </div>
+
+                        <div class="uk-width-3-5 ">
+
+                            <div class="hidden-lg text-center">
+                                <h6>NOW</h6>
+                                <i ng-class="class0" class="owf owf-5x"></i>
+                                <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                            </div>
+
+                            <ul class="text-center visible-lg">
+                                <li style="display: inline-block">
+                                    <h6>NOW</h6>
+                                    <i ng-class="class0" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[0].main.temp | number: 0}}<sup>o</sup>C</p>
+                                </li>
+                                <li  style="display: inline-block">
+                                    <h6>+3h</h6>
+                                    <i ng-class="class1" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[1].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                                <li   style="display: inline-block">
+                                    <h6>+6h</h6>
+                                    <i ng-class="class2" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[2].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                                <li   style="display: inline-block">
+                                    <h6>+9h</h6>
+                                    <i ng-class="class3" class="owf owf-5x"></i>
+                                    <p class="raleway mg-top" >{{data.list[3].main.temp | number: 0 }}<sup>o</sup>C</p>
+                                </li>
+                            </ul>
+                        </div>
 
                     </div>
                 </div>
@@ -366,17 +503,42 @@
             <div class="w3-row">
                 <div class="w3-col s9  ">
                     <ul>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                        <li class="date-body "><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                        <li class="date-body foot-brd"><a href="index.html" class="w3-text-white w3-hover-opacity"><b>
+                            صفحه اصلی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نقشه سایت
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            الف تا ی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            پست الکترونیک
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            نظرسنجی
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                            تابلوی اعلانات
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            موقعیت مکانی دانشگاه
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="#"  class="w3-text-white w3-hover-opacity"><b>
+                            En
+                        </b></a></li>
+                        <li class="date-body foot-brd"><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                            RSS
+                        </b></a></li>
                         <li>
-                            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
+                            <p class="w3-text-grey">
+                                طراح
+                                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                                    سپهر بهنامی فر.
+                                </a>
+                                ©
+                                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -387,9 +549,7 @@
         </div>
 
 
-
     </div>
-
 
     <div class="uk-block visible-xs" style="background-color: firebrick">
         <div class="pad-con-l pad-con-r">
@@ -401,32 +561,59 @@
                     </td>
                     <td style="text-align: right" >
                         <ul>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                صفحه اصلی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نقشه سایت
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                الف تا ی
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                پست الکترونیک
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                نظرسنجی
+                            </b></a></li>
                         </ul>
                     </td>
                     <td style="text-align: right" >
                         <ul>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
-                            <li ><a class="w3-text-white w3-hover-opacity"><b>link1</b></a></li>
+                            <li ><a  href="../html/college.html" class="w3-text-white w3-hover-opacity"><b>
+                                تابلوی اعلانات
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                موقعیت مکانی دانشگاه
+                            </b></a></li>
+                            <li ><a href="../html/template.html" class="w3-text-white w3-hover-opacity"><b>
+                                RSS
+                            </b></a></li>
+                            <li ><a href="#" class="w3-text-white w3-hover-opacity"><b>
+                                En
+                            </b></a></li>
                         </ul>
                     </td>
 
                 </tr>
 
             </table>
-            <p class="w3-text-grey">©qia University. text text text.CopyrightTrademark Notice</p>
-
+            <p class="w3-text-grey">
+                طراح
+                <a href="https://ir.linkedin.com/in/sepehr-behnami-889ab092" class="w3-text-dark-grey w3-hover-opacity">
+                    سپهر بهنامی فر.
+                </a>
+                ©
+                کلیه حقوق مادی و معنوی این سایت متعلق به دانشگاه آزاد اسلامی قزوین می باشد.
+            </p>
         </div>
     </div>
 
     <!-- end of footer -->
 
 </div>
+
+<script src="../js/college-notic.js"></script>
+
 </body>
 </html>
