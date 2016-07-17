@@ -1,3 +1,15 @@
+@font-face {
+    font-family: mainFont;
+    src: url("../font/Gandom.woff");
+}
+
+*{
+    font-family: mainFont , "Helvetica Neue", "Helvetica", "Arial", sans-serif ;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: mainFont , "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
 .nav-set{
     height: 100px;
     background-color: white !important;
@@ -49,6 +61,63 @@ a:hover{
     display: inline;
     float: left;
 }
+
+.bor-btn{
+    border-bottom: 1px solid lightgray
+}
+
+.align-txt{
+    text-align: justify;
+}
+.img-news{
+    width: 100% !important;
+}
+@media screen and (min-width: 767px) {
+    .img-news {
+        height: 160px!important;
+    }
+}
+
+.raleway{
+    font-family: Raleway!important;
+}
+
+.mg-top{
+    margin-top: -5px;
+}
+
+
+#wrap a{
+    display:inline-block;
+    width:120px; height:120px;
+    text-align:center; border-radius:120px; color:#105952; }
+
+.big{font-size:75px; margin:auto; height:100%;  width:100%; line-height:120px}
+
+
+.overf{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+}
+
+.foot-brd{
+    border-left: 1px solid lightgrey;
+    padding-right: 2px !important;
+}
+
+.link-h{
+    text-decoration: none!important;
+    color: white !important;
+}
+.link-h:hover{
+    text-decoration: underline !important;
+}
+
+
+
+
+
 
 .btm{
      height: 250px;
