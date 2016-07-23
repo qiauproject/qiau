@@ -16,6 +16,45 @@ app.controller('myCtrl', function($scope,$http) {
 });
 
 
+//--------------------------
+setTimeout(function() {
+    $( document ).ready(function() {
+
+        $.notify.addStyle('notify', {
+            html: "<a  href='../html/notic-temp.html' data-notify-text></a>",
+            classes: {
+                base: {
+                    "white-space": "nowrap",
+                    "background-color": "firebrick",
+                    "color":"white",
+                    "padding": "5px",
+                    "font-family": "mainFont",
+                    "font-size": "1.5em",
+                    "border-radius": "5px",
+                    "opacity": "0.9",
+                }
+            }
+        });
+
+        $.notify(
+            'دعوت به همکاری در مرکز شتابدهنده',
+            {
+                style: 'notify',
+                position:'right bottom',
+                autoHideDelay: 10000,
+
+
+
+            });
+
+
+
+    });
+}, 10000);
+
+
+//--------------------------
+
 var myCenter=new google.maps.LatLng(36.3228975,50.031462);
 var marker;
 
@@ -44,6 +83,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
+//--------------------------
 
 function myFunction(id) {
     var x = document.getElementById(id);
