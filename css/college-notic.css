@@ -150,3 +150,9 @@ a:hover{
     width: 50%!important;
     padding-bottom: 5px;
 }
+.gi{
+    font-family: mainFont;
+    font-size: 2em;
+    border-radius: 20px;
+    opacity: 0.9;
+}
