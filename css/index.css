@@ -113,7 +113,11 @@ a:hover{
     text-decoration: underline !important;
 }
 
-
+@media screen and (max-width: 767px) {
+    .mob-slide {
+        padding: 0px !important;
+    }
+}
 
 
 
